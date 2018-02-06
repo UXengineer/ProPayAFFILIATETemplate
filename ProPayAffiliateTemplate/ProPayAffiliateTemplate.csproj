@@ -149,28 +149,84 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="App_Themes\Default\css\pricing-table.css">
+      <DependentUpon>pricing-table.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Default\css\pricing-table.min.css">
+      <DependentUpon>pricing-table.css</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Default\css\theme.css" />
+    <Content Include="App_Themes\Default\css\theme.min.css" />
+    <Content Include="App_Themes\Default\img\bg.jpg" />
+    <Content Include="App_Themes\Default\img\cover.jpg" />
+    <Content Include="App_Themes\Default\img\feature-1.png" />
+    <Content Include="App_Themes\Default\img\feature-2.png" />
+    <Content Include="App_Themes\Default\img\feature-3.png" />
+    <Content Include="App_Themes\Default\img\feature-4.png" />
+    <Content Include="App_Themes\Default\img\feature-5.png" />
+    <Content Include="App_Themes\Default\img\feature-6.png" />
+    <Content Include="App_Themes\Default\img\features-bg.jpg" />
+    <Content Include="App_Themes\Default\img\gadgets.png" />
+    <Content Include="App_Themes\Default\img\logo-nav.png" />
+    <Content Include="App_Themes\Default\img\logo.png" />
+    <Content Include="App_Themes\Default\img\parallax-bg.jpg" />
+    <Content Include="App_Themes\MaryKay\img\bg.jpg" />
+    <Content Include="App_Themes\MaryKay\img\feature-1.png" />
+    <Content Include="App_Themes\MaryKay\img\feature-2.png" />
+    <Content Include="App_Themes\MaryKay\img\feature-3.png" />
+    <Content Include="App_Themes\MaryKay\img\feature-4.png" />
+    <Content Include="App_Themes\MaryKay\img\feature-5.png" />
+    <Content Include="App_Themes\MaryKay\img\feature-6.png" />
+    <Content Include="App_Themes\MaryKay\img\features-bg.jpg" />
+    <Content Include="App_Themes\MaryKay\img\logo-nav.png" />
+    <Content Include="App_Themes\MaryKay\img\logo.png" />
+    <Content Include="App_Themes\Template\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\page-style.css" />
+    <Content Include="Content\bootstrap\pricing-style-ORIGINAL.css" />
+    <Content Include="Content\bootstrap\pricing-table.css" />
+    <Content Include="Content\default.css">
+      <DependentUpon>default.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\default.min.css">
+      <DependentUpon>default.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Images\social_icons_Facebook.png" />
+    <Content Include="Images\social_icons_Facebook_hover.png" />
+    <Content Include="Images\social_icons_Instagram.png" />
+    <Content Include="Images\social_icons_Instagram_hover.png" />
+    <Content Include="Images\social_icons_LinkedIn.png" />
+    <Content Include="Images\social_icons_LinkedIn_hover.png" />
+    <Content Include="Images\social_icons_Pinterest.png" />
+    <Content Include="Images\social_icons_Pinterest_hover.png" />
+    <Content Include="Images\social_icons_Twitter.png" />
+    <Content Include="Images\social_icons_Twitter_hover.png" />
+    <Content Include="Images\social_icons_YouTube.png" />
+    <Content Include="Images\social_icons_YouTube_hover.png" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap\jquery.min.js" />
+    <Content Include="Scripts\counterup.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\easing.min.js" />
+    <Content Include="Scripts\hoverIntent.js" />
+    <Content Include="Scripts\jquery-migrate.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\lockfixed.min.js" />
+    <Content Include="Scripts\parallax.js" />
+    <Content Include="Scripts\stellar.min.js" />
+    <Content Include="Scripts\sticky.js" />
+    <Content Include="Scripts\superfish.min.js" />
+    <Content Include="Scripts\tether.min.js" />
+    <Content Include="Scripts\waypoints.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -181,27 +237,45 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\MaryKay\css\" />
+    <Folder Include="App_Themes\Template\css\" />
+    <Folder Include="App_Themes\Template\img\" />
+    <Folder Include="App_Themes\Template\js\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="App_Themes\Default\css\theme.scss" />
+    <Content Include="Content\default.scss" />
+    <Content Include="App_Themes\Default\css\pricing-table.scss" />
+    <Content Include="App_Themes\Template\fonts\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Template\fonts\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="App_Themes\Template\fonts\FontAwesome.otf" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_LayoutAffiliates.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Home\PricingOne.cshtml" />
+    <Content Include="Views\Home\PricingTwo.cshtml" />
+    <Content Include="Views\Home\PricingThree.cshtml" />
+    <Content Include="Views\Shared\_WhiteLableAffiliateLayout.cshtml" />
+    <Content Include="Views\Home\Affiliates.cshtml" />
+    <Content Include="Views\Shared\_Template.cshtml" />
+    <Content Include="Views\Home\Template.cshtml" />
+    <None Include="Properties\PublishProfiles\ProPayAffiliateTemplate - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

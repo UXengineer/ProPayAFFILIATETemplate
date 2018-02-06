@@ -1,0 +1,556 @@
+﻿<!DOCTYPE html>
+@{
+    ViewBag.PartnerTheme = "Default";
+    ViewBag.PageTitle = "White Label Template";
+    ViewBag.PageDescription = "";
+    ViewBag.PartnerName = "PROPAY";
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>@ViewBag.PageTitle</title>
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/App_Themes/@ViewBag.PartnerTheme/css/pricing-table.min.css" rel="stylesheet" />
+
+    <style>
+        @@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600|Droid+Sans:400,700);
+        .raleway {font-family: 'Raleway', sans-serif;font-weight: 400;}
+        .raleway-medium {font-family: 'Raleway', sans-serif;font-weight: 500;}
+        .raleway-bold {font-family: 'Raleway', sans-serif;font-weight: 600;}
+        .droid {font-family: 'Droid Sans', sans-serif;font-weight: 400;}
+        .droid-bold {font-family: 'Droid Sans', sans-serif;font-weight: 700;}
+
+html, body {
+  background-color: #ffffff;
+  color: #46484a;
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-size: 17px; }
+
+/*a {color: #70c3be; }*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+h1 {font-size: 32px;font-weight: 400;}
+h2 {font-size: 30px;font-weight: 500;}
+h3 {font-size: 24px;font-weight: 400;}
+h4 {font-size: 18px;font-weight: 400;}
+h5 {font-size: 15px;font-weight: 500;}
+
+p {
+  color: #696b6e;
+  font-weight: 300 !important;
+  font-size: 1rem; }
+
+/*p.lead {
+  color: #696b6e;
+  font-weight: 300 !important;
+  font-size: 1.2rem; }*/
+
+.divider {
+  display: block;
+  width: 5rem;
+  height: 4px;
+  background-color: #ded9e2;
+  margin: 2em auto; }
+
+.form-control-custom {
+  border: 1px solid #ded9e2;
+  width: 100%;
+  padding: .75rem;
+  font-size: .8rem;
+  color: #696b6e;
+  border-radius: .3rem; }
+
+.form-control-custom:focus {
+  border-color: #70c3be;
+  outline: none; }
+
+.emphasis {
+  font-family: Georgia, Times, 'Times New Roman';
+  font-style: italic;
+  color: #70c3be; }
+
+.constrain-width {
+  max-width: 45rem;
+  margin: 0 auto; }
+
+.video-container, .responsive-vid {
+  width: 100%;
+  margin: 0 auto; }
+
+.rounded-corners {
+  border-radius: .3rem; }
+
+.pill-btn {
+  border-radius: 499rem !important; }
+
+.justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.alt-background {
+  background: #f25f79 !important;
+  border-top: 1px solid #f25f79;
+  border-bottom: 1px solid #f25f79; }
+
+/*.bg-primary {
+  background-color: #70c3be !important; }
+
+.bg-secondary {
+  background-color: #3d354f !important; }*/
+
+/*.btn, button {
+  padding: .5rem 1rem; }
+
+.btn-primary, .btn-outline-primary, .btn-secondary, .btn-outline-secondary, .btn-white, .btn-outline-white, .btn-success, .btn-outline-success, .btn-info, .btn-outline-info, .btn-warning, .btn-outline-warning, .btn-danger, .btn-outline-danger {
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .3rem;
+  letter-spacing: 0.05em;
+  border-width: 0.15em; }
+
+.btn-lg {
+  padding: .75rem 2rem;
+  font-size: .8rem; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #70c3be;
+  border-color: #70c3be; }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #4cb4ae;
+  border-color: #4cb4ae; }
+
+.btn-outline-primary, .btn-outline-primary:visited {
+  color: #70c3be;
+  border-color: #70c3be;
+  background: none; }
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: #70c3be;
+  border-color: #70c3be;
+  color: #fff; }
+
+.btn-secondary, .btn-secondary:visited {
+  border-color: #3d354f;
+  background-color: #3d354f;
+  color: #fff; }
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  border-color: #252130;
+  background-color: #252130;
+  color: #fff; }
+
+.btn-outline-secondary, .btn-outline-secondary:visited {
+  color: #3d354f;
+  border-color: #3d354f;
+  background: none; }
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active {
+  border-color: #252130;
+  background: #252130;
+  color: #fff; }
+
+.btn-white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #46484a; }
+
+.btn-white:hover, .btn-white:focus, .btn-white:active {
+  border-color: #bababa;
+  background-color: #bababa;
+  color: #46484a; }
+
+.btn-outline-white, .btn-outline-white:visited {
+  background: none;
+  color: #fff;
+  border-color: #fff; }
+
+.btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
+  color: #46484a;
+  background: #fff; }*/
+
+.color-white {color: #FFFFFF;}
+.color-black {color: #000000;}
+
+.link-white, link-white:visited {
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .3rem;
+  border: 0;
+  color: #fff; }
+
+.link-white:hover, .link-white:focus, .link-white:active {
+  color: #bababa !important; }
+
+.navbar-custom {
+  background: transparent; }
+
+        a.navbar-brand, a.logo {
+            font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+            color: #fff !important;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 0;
+        }
+
+.navbar-toggler-social {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1em; }
+
+.navbar-toggler-social:hover {
+  border-color: #fff;
+  color: #fff;
+  opacity: .6; }
+
+.navbar-toggler-social:focus {
+  outline: none; }
+
+a.logo:hover, a.logo:active, a.logo:focus {
+  text-decoration: none; }
+
+li.nav-item a {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 0.05em; }
+li.nav-item .btn {
+  margin-top: .2rem;
+  margin-left: .4rem; }
+li.nav-item .btn-white {
+  color: #46484a; }
+
+.cover {
+    background: #3d354f url('../../App_Themes/Default/img/cover.jpg') center;
+    background-size: cover;
+    min-height: 42rem;
+    height: auto;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem;
+}
+  .cover h1 {
+    color: #fff; }
+  .cover p {
+    color: #fff; }
+  .cover p.lead {
+    margin: 1rem auto 2rem auto;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 70%; }
+  .cover .cover-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 36rem;
+    margin: 0 auto; }
+  .cover .form-control-custom {
+    border: none;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    color: #696b6e; }
+  .cover .form-control-custom:focus {
+    border: none;
+    background: #fff;
+    color: #46484a; }
+
+@@media screen and (max-width: 768px) {
+  .cover h1 {
+    font-size: 3.2rem; }
+  .cover p {
+    font-size: 1.1rem; } }
+@@media screen and (max-width: 420px) {
+  .cover h1 {
+    font-size: 2.5rem; }
+  .cover p {
+    font-size: 1rem; }
+
+  .btn-lg {
+    font-size: 0.7rem !important;
+    padding: 0.65rem 1.2rem !important; } }
+
+        /*ORIGINAL
+            .cover-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }*/
+
+.cover-inner {
+  /*display: table-cell;*/
+  margin:80px auto 0 auto;
+  vertical-align: middle; }
+
+.social.navbar-nav {
+  padding: 0; }
+
+@@media screen and (max-width: 991px) {
+        .social.navbar-nav {
+            margin: 0 auto;
+            display: inline-block;
+        } }
+        .social li {
+            display: inline-block;
+        }
+
+.social li a, .social li svg {
+  display: block;
+  width: 1.6em;
+  margin: 0 .1em;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  color: #ededed;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+.social li a:hover, .social li svg:hover {
+    color: #FFF;
+    border-color: #FFF;
+}
+
+
+.cta {
+  color: #46484a;
+  padding: 7rem 0; }
+  .cta p {
+    color: #696b6e; }
+  .cta form.subscribe {
+    margin: 0 auto;
+    width: 100%; }
+
+@@media screen and (max-width: 420px) {
+  .cta h1, .cta h2 {
+    font-size: 2.5rem; }
+  .cta p {
+    font-size: 1rem; }
+
+  .btn-lg {
+    font-size: 0.8rem !important;
+    padding: 1rem 1.5rem; } }
+.content {
+  background: #fff;
+  padding-bottom: 0.1rem; }
+  .content .container {
+    margin: 4rem auto 2.5rem auto; }
+  .content .full-width {
+    width: 100%; }
+
+.features {
+  padding: 5rem 0 4.5rem 0; }
+  .features h2 {
+    margin-top: 2rem; }
+  .features .col-feature {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    .features .col-feature em {
+      color: #46484a; }
+    .features .col-feature .rounded-circle {
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      width: 6em;
+      height: 6em;
+      background: #fff; }
+
+.pricing-table {
+  padding: 7rem 0;
+  background: #f7f6f8; }
+  .pricing-table .col-pricing-table {
+    background: #fff;
+    padding: 0;
+    padding-bottom: 2rem;
+    border-radius: .3rem; }
+    .pricing-table .col-pricing-table .plan-header {
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem .5rem; }
+    .pricing-table .col-pricing-table h2.plan-price {
+      color: #46484a;
+      margin: 0;
+      font-weight: 200; }
+      .pricing-table .col-pricing-table h2.plan-price small {
+        font-weight: 200;
+        font-size: 1.5rem; }
+    .pricing-table .col-pricing-table ul.plan-feature-list {
+      list-style: none;
+      padding: 1rem 2rem;
+      margin-top: 0; }
+      .pricing-table .col-pricing-table ul.plan-feature-list li {
+        color: #696b6e;
+        margin: .5rem 0; }
+    .pricing-table .col-pricing-table .divider {
+      margin: 0 auto; }
+  .pricing-table .col-pricing-table.bg-primary h4.plan-type, .pricing-table .col-pricing-table.bg-secondary h4.plan-type, .pricing-table .col-pricing-table.bg-info h4.plan-type, .pricing-table .col-pricing-table.bg-success h4.plan-type, .pricing-table .col-pricing-table.bg-warning h4.plan-type, .pricing-table .col-pricing-table.bg-danger h4.plan-type {
+    color: #fff; }
+  .pricing-table .col-pricing-table.bg-primary h2.plan-price, .pricing-table .col-pricing-table.bg-secondary h2.plan-price, .pricing-table .col-pricing-table.bg-info h2.plan-price, .pricing-table .col-pricing-table.bg-success h2.plan-price, .pricing-table .col-pricing-table.bg-warning h2.plan-price, .pricing-table .col-pricing-table.bg-danger h2.plan-price {
+    color: #fff; }
+  .pricing-table .col-pricing-table.bg-primary ul.plan-feature-list li, .pricing-table .col-pricing-table.bg-secondary ul.plan-feature-list li, .pricing-table .col-pricing-table.bg-info ul.plan-feature-list li, .pricing-table .col-pricing-table.bg-success ul.plan-feature-list li, .pricing-table .col-pricing-table.bg-warning ul.plan-feature-list li, .pricing-table .col-pricing-table.bg-danger ul.plan-feature-list li {
+    color: rgba(255, 255, 255, 0.75); }
+  .pricing-table .col-pricing-table.bg-primary strong, .pricing-table .col-pricing-table.bg-primary small, .pricing-table .col-pricing-table.bg-secondary strong, .pricing-table .col-pricing-table.bg-secondary small, .pricing-table .col-pricing-table.bg-info strong, .pricing-table .col-pricing-table.bg-info small, .pricing-table .col-pricing-table.bg-success strong, .pricing-table .col-pricing-table.bg-success small, .pricing-table .col-pricing-table.bg-warning strong, .pricing-table .col-pricing-table.bg-warning small, .pricing-table .col-pricing-table.bg-danger strong, .pricing-table .col-pricing-table.bg-danger small {
+    color: #fff; }
+  .pricing-table .col-pricing-table.bg-primary .divider, .pricing-table .col-pricing-table.bg-secondary .divider, .pricing-table .col-pricing-table.bg-info .divider, .pricing-table .col-pricing-table.bg-success .divider, .pricing-table .col-pricing-table.bg-warning .divider, .pricing-table .col-pricing-table.bg-danger .divider {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+.testimonials {
+  padding: 7rem 0 4rem 0; }
+  .testimonials h3 {
+    margin-bottom: 0; }
+  .testimonials .col-testimonial {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    .testimonials .col-testimonial img {
+      margin-bottom: 2rem;
+      width: 98%;
+      max-width: 8rem; }
+  .testimonials .quote-text {
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic; }
+  .testimonials .quote-author {
+    font-style: italic;
+    font-family: Georgia, Times, serif;
+    color: #46484a; }
+
+.footer {
+  background: #3d354f;
+  min-height: 4rem;
+  width: 100%;
+  color: #fff;
+  padding-top: 3em;
+  padding-bottom: 0.3em; }
+  .footer p {
+    color: #fff !important;
+    line-height: 2.4em; }
+  .footer .nav-footer .nav-link {
+    color: #fff; }
+  .footer .nav-footer .nav-link:hover {
+    color: #70c3be; }
+
+.nav-footer {
+  list-style: none;
+  float: right; }
+  .nav-footer li {
+    float: left; }
+
+@@media screen and (max-width: 768px) {
+  .nav-footer {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center; } }
+
+        .features-header {font-size:18px; font-family: 'Raleway', sans-serif; color:#FFFFFF; text-align: center; padding-bottom:25px;}
+        .features-description {font-size:14px; font-family: 'Raleway', sans-serif; color:#FFFFFF; text-align:center;}
+        .text-shadow {text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);}
+        .text-shadow-half {text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);}
+        .text-shadow-onethird {text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);}
+    </style>
+</head>
+<body>
+    <section class="cover text-center">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand text-shadow-half" href="Index">@Html.Raw(ViewBag.PartnerName)</a>
+                <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">Connect</button>
+                <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbar-4">
+                    <ul class="social navbar-nav mt-2 mt-md-0">
+                        <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" title="Google+"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="cover-container">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-6">
+                    <div class="cover-inner">
+                        <div class="display-block pb30"><img src="~/App_Themes/@ViewBag.PartnerTheme/img/logo.png" class="img-fluid" /></div>
+                        <div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn custom-pricing-cover-btn cover-btn-round" title="Easy account sign up. Start Now!">Sign Up</a></div>
+                        <div class="pb10 mb20"></div>
+                        <h1 class="jumbotron-heading text-shadow">Special merchant accounts for Mary Kay consultants</h1>
+                        <div class="pb30"></div>
+                        <p class="lead" hidden>Be the first to know when we are ready to launch. Etiam porta sem malesuada magna mollis euismod. Sed mollis neque at aliquam rhoncus, consectetur adipiscing elit.</p>
+                        <div class="pt30"><a href="#" id="LoginLink" class="partner-cover-btn custom-pricing-cover-btn cover-btn-round" title="Login to your account!">LOGIN</a></div>
+                        <div class="pb10 mb10"></div>
+                    </div>
+                </div><div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+    <section class="content alt-background">
+        <div class="container">
+            <div class="row justify-center">
+                <div class="col-md-12 text-center mr-auto">
+                    <h2 class="color-white">Accept Credit Cards and Debit Cards for your business</h2>
+                    <p class="mb-3 color-white">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</p>
+                </div>
+                <div class="col-md-12 text-center mr-auto">
+                    <div class="row">
+                        <div class="col">
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-1.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">Mary Kay Prepaid Debit MasterCard<sup>®</sup></h4>
+                            <p class="features-description">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</p>
+                        </div>
+                        <div class="col">
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-2.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">No need to transfer funds around</h4>
+                            <p class="features-description">Spend funds from your commissions and sales directly from your ProPay ccount to buy more product from Mary Kay corporate.</p>
+                        </div>
+                        <div class="col">
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-3.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">Mary Kay branded card reader</h4>
+                            <p class="features-description">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</p>
+                        </div>
+                        <div class="col">
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-4.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">Integration to your Mary Kay personal website</h4>
+                            <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept paymetns any time online.</p>
+                        </div>
+                        <div class="col" hidden>
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-5.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">Additional product header in this space</h4>
+                            <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
+                        </div>
+                        <div class="col" hidden>
+                            <div class="display-block">
+                                <img src="~/App_Themes/Default/img/feature-6.png" class="img-fluid" />
+                            </div>
+                            <h4 class="features-header">Additional product header in this space</h4>
+                            <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @RenderBody()
+
+    <script src="~/Scripts/bootstrap/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

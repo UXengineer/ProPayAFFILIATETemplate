@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/default.css",
+    "inputFile": "Content/default.scss"
+  },
+  {
+    "outputFile": "App_Themes/Default/css/pricing-table.css",
+    "inputFile": "App_Themes/Default/css/pricing-table.scss"
+  },
+  {
+    "outputFile": "App_Themes/Default/css/theme.css",
+    "inputFile": "App_Themes/Default/css/theme.scss"
+  }
+]

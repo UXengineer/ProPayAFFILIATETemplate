@@ -1,31 +1,929 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAffiliates.cshtml";
+    ViewBag.Partner = "ProPay";
+    ViewBag.PageTitle = "Index"; //DO NOT EXCEED 65 CHARACTERS
+    ViewBag.PageDescription = "This is Patner's description for the services offered under this page."; //DO NOT EXCEED 145 CHARACTERS
+    ViewBag.PartnerTheme = "Default";
+
+    //FEATURES SECTION
+    ViewBag.FeaturesHeaderLabel = "Accept Credit Cards and Debit Cards for your business";
+    ViewBag.FeaturesExplanationLabel = "Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+<section class="hero">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="~/App_Themes/@ViewBag.PartnerTheme/img/logo.png"></a>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <h2>
+                Special Merchant Accounts
+            </h2>
+            <p class="tagline"></p>
+            <a class="btn btn-full" href="#about">Get Started Now</a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+</section>
+<!-- /Hero -->
+<!-- Header -->
+<header id="header" hidden>
+    <div class="container">
+        <div id="logo" class="pull-left">
+            <a href="index.html"><img src="~/App_Themes/@ViewBag.PartnerTheme/img/logo-nav.png" alt="" title="" /></a>
+        </div>
+        <nav id="nav-menu-container">
+            <ul class="nav-menu" hidden>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav class="nav social-nav pull-right d-none d-lg-inline">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </nav>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</header>
+<!-- #header -->
+<!-- Parallax -->
+<div id="product-features" class="block bg-custom block-pd-lg block-bg-overlay text-center" data-bg-img="https://www.propay.com/en-US/Images/Graphics/MK-Pantone-Color.aspx?width=1858&height=998&ext=.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+    <h2>@Html.Raw(ViewBag.FeaturesHeaderLabel)</h2>
+    <div class="container-fluid">
+        <p>@Html.Raw(ViewBag.FeaturesExplanationLabel)</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-1.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">Mary Kay Prepaid Debit MasterCard®</h4>
+                </div>
+                <div class="row row-eq-height text-center">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</div>
+            </div>
+            <div class="col">
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-2.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">No need to transfer funds around</h4>
+                </div>
+                <div class="row row-eq-height">Spend funds from your commissions and sales directly from your ProPay ccount to buy more product from Mary Kay corporate.</div>
+            </div>
+            <div class="col">
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-3.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">Mary Kay branded card reader</h4>
+                </div>
+                <div class="row row-eq-height">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</div>
+            </div>
+            <div class="col">
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-4.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">Integration to your Mary Kay personal website</h4>
+                </div>
+                <div class="row row-eq-height">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept paymetns any time online.</div>
+            </div>
+            <div class="col">
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-5.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">Bacon ipsum dolor amet ball tip</h4>
+                </div>
+                <div class="row row-eq-height">Hamburger pork chop andouille picanha, shank filet mignon sausage ball tip cupim pig swine burgdoggen beef.</div>
+            </div>
+            <div class="col" hidden>
+                <div class="row"><img class="gadgets-img mlrauto" src="~/App_Themes/@ViewBag.PartnerTheme/img/feature-6.png"></div>
+                <div class="clearfix"></div>
+                <div class="row row-eq-height">
+                    <h4 class="mlrauto">Bacon ipsum dolor amet ball tip</h4>
+                </div>
+                <div class="row row-eq-height align-text-center center-text text-center">Hamburger pork chop andouille picanha, shank filet mignon sausage ball tip cupim pig swine burgdoggen beef.</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="clearfix ptb20">&nbsp;</div>
     </div>
 </div>
+<!-- ./Parallax -->
+<!-- Call to Action -->
+<section class="cta" hidden>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+                <h2>Call to Action Header Section</h2>
+                <p>Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren</p>
+            </div>
+            <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+                <a class="btn btn-ghost" href="#">Call to Action!</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Call to Action -->
+<!-- Pricing Table-->
+<section id="pricing" class="container-fluid pricing">
+    @*<style>
+            /*
+                Created on : Jul 4, 2017, 12:43:10 AM
+                Author     : Atta-Ur-Rehman Shah (http://attacomsian.com)
+            */
+            section {
+                padding: 80px 0px;
+            }
+
+            .card-outline-primary {
+                border: solid 1px #0080ac;
+            }
+
+            /*.sticky-navigation {
+                top: -100px;
+            }*/
+
+            .bg-alt {
+                background-color: #fff;
+            }
+
+            /*.bg-faded {
+                background-color: #EDECEC;
+            }*/
+
+            /*.bg-grey {
+                background-color: #F9F9FA;
+            }*/
+
+            .bg-primary {
+                background-color: #0080ac !important;
+            }
+
+            /*.text-faded {
+                color: #EDECEC;
+            }*/
+
+            /*.text-dark {
+                color: #37474F;
+            }*/
+
+            .text-muted {
+                color: #999 !important;
+            }
+
+            .primary-text-header {
+                color: #0080ac !important;
+            }
+
+            .btn {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .btn-white {
+                color: #0080ac;
+                background-color: #fff;
+                border-color: #fff;
+            }
+
+                .btn-white:hover {
+                    background: transparent !important;
+                    color: #fff !important;
+                }
+
+            .btn-primary {
+                background-color: #0080ac !important;
+                border-color: #0080ac !important;
+            }
+
+            .btn-radius {
+                border-radius: 50px;
+            }
+
+            /*.border-none {
+                border: none !important;
+                border-color: transparent !important;
+            }*/
+
+            .border-bottom {
+                border-bottom: 1px solid #DEE5E5 !important;
+            }
+            /*
+            Pricing tables
+            */
+            .pricing-feature-list {
+                padding: 10px 25% -5px 25%;
+                margin: 15px 8%;
+                /*border: dotted 1px red;*/
+            }
+
+                .pricing-feature-list li {
+                    text-align: left;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 30px;
+                }
+
+            .pricing-list {
+                padding-top: 3px;
+                padding-bottom: -5px;
+                /*border: dotted 1px red;*/
+            }
+
+                .pricing-list li {
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin-left: -12px;
+                    margin-right: -14px;
+                    margin-bottom: 10px;
+                    /*border: dotted 1px red;*/
+                }
+
+            li.odd {
+                background-color: #f1f3f2;
+            }
+
+            .feature-header {
+                background-color: #0080ac;
+                min-height: 40px;
+                color: #ffffff;
+                font-size: 14px;
+                text-align: center;
+                font-weight: 500;
+                padding: 10px 8px;
+                margin: 0px -18px 0px -17px;
+            }
+        </style>*@
+    <div class="row">
+        <div class="container">
+            <div class="text-center">
+                <h2>Special Pricing for @ViewBag.Partner</h2>
+                <p class="f15 pt8 pb50">Rates lower than PayPal or Square! See for yourself:</p>
+            </div>
+            @* ********************** FEATURES AND PRICING TABLE* ********************** @
+
+                            <div class="section-gray">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 text-center">
+                            <ul id="feaures-and-pricing-selector" class="nav nav-tabs" role="tablist">
+                                <li class="nav-item"><a class="nav-link active" href="#monthly" id="monthly-tab" role="tab" data-toggle="tab" aria-controls="monthly" aria-expanded="true"><i class="fa fa-usd"></i> MONTHLY</a> </li>
+                                <li class="nav-item"><a class="nav-link" href="#yearly" role="tab" id="yearly-tab" data-toggle="tab" aria-controls="yearly" aria-expanded="false"><i class="fa fa-usd"></i> YEARLY</a> </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="container-fluid">
+                            <!-- Content Panel -->
+                            <div id="features-and-pricing" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade active show" id="monthly" aria-labelledby="monthly-tab" aria-expanded="true">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            @*SILVER PLAN*@
+            <div class="block block-pricing">
+                <div class="table">
+                    <div class="row plan-header">
+                        <div class="plan-header-holder">
+                            <div class="display-block">
+                                <span class="plan-header-name">SILVER</span>
+                                <span class="plan-header-plan">PLAN</span>
+                                <div class="plan-header-value">Best starting value!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="block-caption"><small>$</small>3.95</h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                    <div class="features-and-pricing-holder">
+                        <div class="features-and-pricing-header">
+                            Available Features
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Online Terminal</li>
+                        <li>Mobile Application</li>
+                        <li>Mobile Website</li>
+                        <li>Touchtone Phone</li>
+                        <li>Buy It Now Button</li>
+                        <li>Donate Now Button</li>
+                        <li>Stored Cards</li>
+                    </ul>
+                    <div class="rates-divider"></div>
+                    <h1 class="block-caption-bottom"><small>$</small>3.95<small>per month</small></h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            <div>
+                                was $<span class="discounted-plan-price">4.35</span>
+                                <span class="discounted-plan-percentage">Save 10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            @*GOLD PLAN*@
+            <div class="block block-pricing">
+                <div class="table">
+                    <div class="row plan-header">
+                        <div class="plan-header-holder">
+                            <div class="display-block">
+                                <span class="plan-header-name">GOLD</span>
+                                <span class="plan-header-plan">PLAN</span>
+                                <div class="plan-header-value">Best starting value!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="block-caption"><small>$</small>5.95</h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                    <div class="features-and-pricing-holder">
+                        <div class="features-and-pricing-header">
+                            Available Features
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Online Terminal</li>
+                        <li>Mobile Application</li>
+                        <li>Mobile Website</li>
+                        <li>Touchtone Phone</li>
+                        <li>Buy It Now Button</li>
+                        <li>Donate Now Button</li>
+                        <li>Stored Cards</li>
+                    </ul>
+                    <div class="rates-divider"></div>
+                    <h1 class="block-caption-bottom"><small>$</small>5.95<small>per month</small></h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            <div>
+                                was $<span class="discounted-plan-price">6.65</span>
+                                <span class="discounted-plan-percentage">Save 10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            @*PLATINUM PLAN*@
+            <div class="block block-pricing">
+                <div class="table">
+                    <div class="row plan-header">
+                        <div class="plan-header-holder">
+                            <div class="display-block">
+                                <span class="plan-header-name">PLATINUM</span>
+                                <span class="plan-header-plan">PLAN</span>
+                                <div class="plan-header-value">Best starting value!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="block-caption"><small>$</small>9.95</h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                    <div class="features-and-pricing-holder">
+                        <div class="features-and-pricing-header">
+                            Available Features
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Online Terminal</li>
+                        <li>Mobile Application</li>
+                        <li>Mobile Website</li>
+                        <li>Touchtone Phone</li>
+                        <li>Buy It Now Button</li>
+                        <li>Donate Now Button</li>
+                        <li>Stored Cards</li>
+                    </ul>
+                    <div class="rates-divider"></div>
+                    <h1 class="block-caption-bottom"><small>$</small>9.95<small>per month</small></h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            <div>
+                                was $<span class="discounted-plan-price">10.95</span>
+                                <span class="discounted-plan-percentage">Save 10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md" hidden>
+            @*EXTRA PLAN*@
+            <div class="block block-pricing">
+                <div class="table">
+                    <div class="row plan-header">
+                        <div class="plan-header-holder">
+                            <div class="display-block">
+                                <span class="plan-header-name">PLATINUM</span>
+                                <span class="plan-header-plan">PLAN</span>
+                                <div class="plan-header-value">Best starting value!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="block-caption"><small>$</small>29.99</h1>
+                    <div class="text-center pt15" style="padding-bottom: 15px;">
+                        <div class="display-inline">
+                            <div>
+                                was $<span class="discounted-plan-price">32.99</span>
+                                <span class="discounted-plan-percentage">Save 10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                    <ul>
+                        <li>Online Terminal</li>
+                        <li>Mobile Application</li>
+                        <li>Mobile Website</li>
+                        <li>Touchtone Phone</li>
+                        <li>Buy It Now Button</li>
+                        <li>Donate Now Button</li>
+                        <li>Stored Cards</li>
+                    </ul>
+                    <div class="rates-header-holder">
+                        <div class="rates-header">
+                            RATES, FEES &amp; LIMITS
+                        </div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Visa:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>2.29% + $0.30</span> (swiped)<br /><span>2.84% + $0.30</span> (keyed)</div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">MasterCard:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>2.29% + $0.30</span> (swiped)<br /><span>2.84% + $0.30</span> (keyed)</div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Am. Express:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>3.19% + $0.30</span> (swiped)<br /><span>3.19% + $0.30</span> (keyed)</div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Discover:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>2.29% + $0.30</span> (swiped)<br /><span>2.84% + $0.30</span> (keyed)</div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Bank Transfer:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>$0.30</span></div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Single Trans. Limit:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>$650</span></div>
+                    </div>
+                    <div class="row card-and-rates-holder">
+                        <div class="col col-md-6 card-brand">Monthly Trans. Limit:</div>
+                        <div class="col col-md-6 card-brand-rates"><span>$2,500</span></div>
+                    </div>
+
+                    <h1 class="block-caption-bottom"><small>$</small>29.99</h1>
+                    <div class="text-center pt15">
+                        per month
+                    </div>
+                    <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="yearly" aria-labelledby="yearly-tab" aria-expanded="false">
+        <div class="row">
+            <div class="col-md">
+                <div class="block block-pricing">
+                    @*YEARLY SILVER*@
+                    <div class="table">
+                        <div class="row plan-header">
+                            <div class="plan-header-holder">
+                                <div class="display-block">
+                                    <span class="plan-header-name">SILVER</span>
+                                    <span class="plan-header-plan">PLAN</span>
+                                    <div class="plan-header-value">Best starting value!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="block-caption"><small>$</small>29.99</h1>
+                        <div class="text-center pt15" style="padding-bottom: 15px;">
+                            <div class="display-inline">
+                                * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                        <div class="features-and-pricing-holder">
+                            <div class="features-and-pricing-header">
+                                Available Features
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Online Terminal</li>
+                            <li>Mobile Application</li>
+                            <li>Mobile Website</li>
+                            <li>Touchtone Phone</li>
+                            <li>Buy It Now Button</li>
+                            <li>Donate Now Button</li>
+                            <li>Stored Cards</li>
+                        </ul>
+                        <div class="rates-divider"></div>
+                        <h1 class="block-caption-bottom"><small>$</small>29.99<small>per year</small></h1>
+                        <div class="text-center pt15" style="padding-bottom: 15px;">
+                            <div class="display-inline">
+                                <div>
+                                    was $<span class="discounted-plan-price">32.99</span>
+                                    <span class="discounted-plan-percentage">Save 10%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="block block-pricing">
+                    @*YEARLY GOLD*@
+                    <div class="table">
+                        <div class="row plan-header">
+                            <div class="plan-header-holder">
+                                <div class="display-block">
+                                    <span class="plan-header-name">GOLD</span>
+                                    <span class="plan-header-plan">PLAN</span>
+                                    <div class="plan-header-value">Best starting value!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="block-caption"><small>$</small>34.99</h1>
+                        <div class="text-center pt15" style="padding-bottom: 15px;">
+                            <div class="display-inline">
+                                * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                        <div class="features-and-pricing-holder">
+                            <div class="features-and-pricing-header">
+                                Available Features
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Online Terminal</li>
+                            <li>Mobile Application</li>
+                            <li>Mobile Website</li>
+                            <li>Touchtone Phone</li>
+                            <li>Buy It Now Button</li>
+                            <li>Donate Now Button</li>
+                            <li>Stored Cards</li>
+                        </ul>
+                        <div class="rates-divider"></div>
+                        <h1 class="block-caption-bottom"><small>$</small>34.99<small>per year</small></h1>
+                        <div class="text-center pt15" style="padding-bottom: 15px;">
+                            <div class="display-inline">
+                                <div>
+                                    was $<span class="discounted-plan-price">38.49</span>
+                                    <span class="discounted-plan-percentage">Save 10%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md" hidden>
+                <div class="block block-pricing">
+                    <div class="table">
+                        <h6 class="category">Corporate</h6>
+                        <h1 class="block-caption"><small>$</small>79</h1>
+                        <ul>
+                            <li><b>4 GB</b> Ram</li>
+                            <li><b>7/24</b> Tech Support</li>
+                            <li><b>40 GB</b> SSD Cloud Storage</li>
+                            <li>Monthly Backups</li>
+                            <li>Palo Protection</li>
+                        </ul> <a href="#" class="partner-btn btn-primary btn-round">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md" hidden>
+                <div class="block block-pricing">
+                    <div class="table">
+                        <h6 class="category">Professional</h6>
+                        <h1 class="block-caption"><small>$</small>99</h1>
+                        <ul>
+                            <li><b>4 GB</b> Ram</li>
+                            <li><b>7/24</b> Tech Support</li>
+                            <li><b>40 GB</b> SSD Cloud Storage</li>
+                            <li>Monthly Backups</li>
+                            <li>Palo Protection</li>
+                        </ul> <a href="#" class="partner-btn btn-primary btn-round">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*</div>
+    </div>
+    </div>
+    </div>
+    </div>*@
+
+
+    @* ********************** ./FEATURES AND PRICING TABLE/. ********************** *@
+    @*<div class="row d-md-flex mt-4 text-center border-blue">
+            </div>
+
+           <br /><br /><br />
+
+        <div class="row mt-4 text-center">
+            <div class="col-sm-12">
+                <div class="card-group">
+                    <div class="card bg-alt mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title pt-4">Basic</h5>
+                            <h3 class="card-title primary-text-header pt-4">FREE</h3>
+                            <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                            <ul class="list-unstyled pricing-list">
+                                <li><b>1</b> Domain</li>
+                                <li><b>4</b> Subdomains</li>
+                                <li><b>100MB</b> Storage</li>
+                                <li><b>1GB</b> Bandwidth</li>
+                                <li><b>Basic</b> Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-radius">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="card card-outline-primary bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title pt-4 text-white">Premium + Card Reader</h5>
+                            <h3 class="card-title pt-4"><sup>$</sup> 41.95</h3>
+                            <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                            <ul class="list-unstyled pricing-list">
+                                <li><b>5</b> Domains</li>
+                                <li><b>50</b> Subdomains</li>
+                                <li><b>5GB</b> Storage</li>
+                                <li><b>Unlimited</b> Bandwidth</li>
+                                <li><b>Priority</b> Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-white btn-radius">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="card bg-alt mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title pt-4">Advanced</h5>
+                            <h3 class="card-title primary-text-header pt-4"><sup>$</sup> 19.99</h3>
+                            <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                            <ul class="list-unstyled pricing-list">
+                                <li><b>Unlimited</b> Domains</li>
+                                <li><b>Unlimited</b> Subdomains</li>
+                                <li><b>Unlimited</b> Storage</li>
+                                <li><b>Unlimited</b> Bandwidth</li>
+                                <li><b>24/7</b> Support</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-radius">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    </div>
+    </div>
+</section>
+<!-- ./Pricing Table-->
+<!-- About -->
+<section class="about" id="about" hidden>
+    <div class="container text-center">
+        <h2>
+            Additional Features Highlight Here
+        </h2>
+
+        <p>
+            Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
+            temporibus an duo.
+        </p>
+
+        <div class="row stats-row">
+            <div class="stats-col text-center col-md-3 col-sm-6">
+                <div class="circle">
+                    <span class="stats-no" data-toggle="counter-up">232</span> Some Featured Header
+                </div>
+            </div>
+
+            <div class="stats-col text-center col-md-3 col-sm-6">
+                <div class="circle">
+                    <span class="stats-no" data-toggle="counter-up">79</span> Some Featured Header
+                </div>
+            </div>
+
+            <div class="stats-col text-center col-md-3 col-sm-6">
+                <div class="circle">
+                    <span class="stats-no" data-toggle="counter-up">1,463</span> Some Featured Header
+                </div>
+            </div>
+
+            <div class="stats-col text-center col-md-3 col-sm-6">
+                <div class="circle">
+                    <span class="stats-no" data-toggle="counter-up">15</span> Some Featured Header
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /About -->
+<!-- Call to Action -->
+<section class="custom-cta" hidden>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+                <h2>
+                    Call to Action Header Section
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+                <a class="btn btn-ghost" href="#">Call to Action!</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./Call to Action -->
+<!-- Features -->
+<section class="features" id="features" hidden>
+    <div class="container">
+        <h2 class="text-center">
+            Additional Features Header
+        </h2>
+        <div class="row">
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-col col-lg-4 col-xs-12">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <span class="fa fa-cube"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>
+                            Custom Feature Header
+                        </h3>
+                        <p>
+                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Features -->
+<section id="sociallinks" hidden>
+    <div class="container-fluid border-black-solid">
+        <div class="container border-cyan">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-red d-xl-none">Left</div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-12 border-green">Center</div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-blue d-xl-none">Right</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="testcolumns" hidden>
+    <div class="container">
+        <div class="my-3">
+            Current tier / breakpoint:
+            <span class="badge badge-primary d-inline d-sm-none">xs</span>
+            <span class="badge badge-primary d-none d-sm-inline d-md-none">sm</span>
+            <span class="badge badge-primary d-none d-md-inline d-lg-none">md</span>
+            <span class="badge badge-primary d-none d-lg-inline d-xl-none">lg</span>
+            <span class="badge badge-primary d-none d-xl-inline">xl</span>
+            (= visible only on this breakpoint)
+        </div>
+        <hr>
+        <span class="d-none d-sm-block">.hidden-xs-down</span>
+        <span class="d-none d-md-block">.hidden-sm-down md</span>
+        <span class="d-none d-lg-block">.hidden-md-down lg</span>
+        <span class="d-none d-xl-block">.hidden-lg-down xl</span>
+        <div class="w-100 my-2"> <hr> </div>
+        <span class="d-none">.hidden-xs-up</span>
+        <span class="d-sm-none">.hidden-sm-up</span>
+        <span class="d-md-none">.hidden-md-up</span>
+        <span class="d-lg-none">.hidden-lg-up</span>
+        <span class="d-xl-none">.hidden-xl</span>
+        <div class="w-100 my-2"> <hr> </div>
+        <span class="d-none d-sm-block">.hidden-xs (only)</span>
+        <span class="d-block d-sm-none d-md-block">.hidden-sm (only)</span>
+        <span class="d-block d-md-none d-lg-block">.hidden-md (only)</span>
+        <span class="d-block d-lg-none d-xl-block">.hidden-lg (only)</span>
+        <span class="d-block d-xl-none">.hidden-xl (only)</span>
+    </div>
+</section>

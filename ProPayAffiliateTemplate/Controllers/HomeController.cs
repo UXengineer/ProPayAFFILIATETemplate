@@ -8,22 +8,39 @@ namespace ProPayAffiliateTemplate.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController()
+        {
+
+        }
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Affiliates()
         {
-            ViewBag.Message = "Your application description page.";
-
+            return View();
+        }
+        public ActionResult Test()
+        {
+            return View();
+        }
+        public ActionResult PricingOne()
+        {
+            return View();
+        }
+        public ActionResult PricingTwo()
+        {
+            return View();
+        }
+        public ActionResult PricingThree()
+        {
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Template()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
