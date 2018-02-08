@@ -1,133 +1,37 @@
-﻿/* 
-   Website: PROPAY AFFILIATES
-   Designed by: Marcelo Martins
-   Last Updated on 1/29/18
+﻿/*  
+    Developed by Marcelo Martins
+    for ProPay's Features and Pricing
+    Last updated: 02/09/2018
 */
-/*MAIN PARTNER CUSTOM COLOR*/
+/*  ********************** /STYLES ARCHITECTURE/ **********************  */
+/*
+    1- COLOR
+    2- SIZING
+    3- PADDING AND MARGIN DEFINITIONS
+    4- FONT SIZING
+    5- IMPORTED FONTS CDN AND API URLS
+    6- FONT DEFINITIONS
+    7- NAVBAR
+    8- HERO IMAGE
+    9- FEATURES AND PRICING
+*/
+/*  ********************** /STYLES ARCHITECTURE/ **********************  */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css") all;
-/*FONT AWESOME*/
-@import url("https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Droid+Sans:400,900|Lato:300,400,400i,700&subset=latin-ext") all;
-html {
-  width: 100%;
-  height: 100%;
-  font-family: Arial, "Droid Sans";
-  font-size: 13px; }
+@import url("https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Droid+Sans:400,900") all;
+.white {
+  color: #fff; }
 
-body {
-  width: 100%;
-  height: 100%;
-  font-family: Arial, "Droid Sans";
-  font-size: 13px; }
+.black {
+  color: black; }
 
-.italic, .italic-text, .text-italic {
-  font-style: italic; }
+.text-shadow {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.87); }
 
-.underline, .text-underline, .underline-text {
-  text-decoration: underline; }
+.text-shadow-half {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.56); }
 
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
-.full-width {
-  width: 100%; }
-
-.no-underline {
-  text-decoration: none; }
-
-.underlined-text {
-  text-decoration: underline; }
-
-.align-text-right {
-  text-align: right !important; }
-
-.align-text-center {
-  text-align: center !important; }
-
-.align-text-left {
-  text-align: left !important; }
-
-.justify-text {
-  text-align: justify !important; }
-
-.no-border {
-  border: none !important; }
-
-.strong {
-  font-family: inherit;
-  font-weight: 900; }
-
-.strong-half {
-  font-family: inherit;
-  font-weight: 600; }
-
-.center-text {
-  text-align: center; }
-
-.display-block {
-  display: block; }
-
-.display-inline {
-  display: inline; }
-
-.display-none {
-  display: none; }
-
-.clearfix {
-  clear: both; }
-
-a.footer-links, .social-sharing {
-  color: #c3c3c3;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  transition: all .35s;
-  cursor: pointer; }
-
-a.footer-links:hover, .social-sharing:hover {
-  color: #ffffff;
-  text-decoration: none;
-  outline: 0px;
-  cursor: pointer; }
-
-.color-light-green {
-  color: #9fc163; }
-
-.color-dark-green {
-  color: #244e22; }
-
-.color-light-gray {
-  color: #999999; }
-
-.color-light-blue {
-  color: #0080c6; }
-
-.color-dark-blue {
-  color: #002776; }
-
-.color-red {
-  color: #ff0000; }
-
-.color-dark-red {
-  color: #b24442; }
-
-.color-orange {
-  color: #F7c000; }
-
-.color-blue {
-  color: #0080c6; }
-
-.color-white {
-  color: #ffffff; }
-
-.color-black {
-  color: #000000; }
-
-.color-gray {
-  color: #7a7a7a; }
+.text-shadow-onethird {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); }
 
 .p0 {
   padding: 0px; }
@@ -544,81 +448,174 @@ a.footer-links:hover, .social-sharing:hover {
 .f30 {
   font-size: 30px; }
 
-.border-red {
-  border: dotted 1px #ff0000; }
+/*FONT AWESOME CDN*/
+/*RALEWAY AND DROID FONT API*/
+body {
+  font-family: "Droid Sans", Arial, sans-serif;
+  font-weight: 400;
+  color: #46484a;
+  font-size: 17px; }
 
-.border-red-solid {
-  border: solid 1px #ff0000; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", Arial, sans-serif; }
 
-.border-gray {
-  border: solid 1px #ccc; }
+h1 {
+  font-size: 32px;
+  font-weight: 400; }
 
-.border-gray-solid {
-  border: solid 1px #ccc; }
+h2 {
+  font-size: 30px;
+  font-weight: 500; }
 
-.border-green {
-  border: dotted 1px #00ac03; }
+h3 {
+  font-size: 24px;
+  font-weight: 400; }
 
-.border-green-solid {
-  border: solid 1px #00ac03; }
+h4 {
+  font-size: 18px;
+  font-weight: 400; }
 
-.border-light-green {
-  border: dotted 1px #6cbc42; }
+h5 {
+  font-size: 15px;
+  font-weight: 500; }
 
-.border-light-green-solid {
-  border: solid 1px #6cbc42; }
+a.navbar-brand, a.logo {
+  font-family: "Droid Sans", Arial, sans-serif;
+  color: #fff !important;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0; }
 
-.border-blue {
-  border: dotted 1px #0080c6; }
+.navbar-custom {
+  background: transparent; }
 
-.border-black {
-  border: dotted 1px #000000; }
+.navbar-toggler-social {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1em; }
+  .navbar-toggler-social:hover {
+    border-color: #fff;
+    color: #fff;
+    opacity: .6; }
+  .navbar-toggler-social:focus {
+    outline: none; }
 
-.border-black-solid {
-  border: solid 1px #000000; }
-
-.border-white {
-  border: dotted 1px #ffffff; }
-
-.border-yellow {
-  border: dotted 1px #d4c600; }
-
-.border-purple {
-  border: dotted 1px #c000ff; }
-
-.border-cyan {
-  border: dotted 1px #6effcb; }
-
-.border-radius-five-px {
-  border-radius: 5px; }
-
-.border-radius-eight-px {
-  border-radius: 8px; }
-
-.border-radius-ten-px {
-  border-radius: 10px; }
-
-.border-radius-fiftheen-px {
-  border-radius: 15px; }
-
-.border-radius-twenty-px {
-  border-radius: 20px; }
-
-.bottom-border-gray {
-  border-bottom: solid 1px #eeeeee; }
-
-.bottom-border-light-blue {
-  border-bottom: solid 1px #0080c6; }
-
-.bottom-border-dark-blue {
-  border-bottom: solid 1px #002776; }
-
-a {
-  color: #9c27b0;
+/*a {color: $partner_main_custom_color;text-decoration: none;
+    &:hover {color: $partner_main_custom_color;text-decoration: underline;}
+}*/
+a.logo:hover {
   text-decoration: none; }
-  a:hover {
-    color: #9c27b0;
-    text-decoration: underline; }
+
+a.logo:active {
+  text-decoration: none; }
+
+a.logo:focus {
+  text-decoration: none; }
+
+.cover h1 {
+  color: #fff; }
+
+.cover p {
+  color: #fff; }
+  .cover p.lead {
+    margin: 1rem auto 2rem auto;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 70%; }
+
+.cover .cover-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 36rem;
+  margin: 0 auto; }
+
+.cover .form-control-custom {
+  border: none;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  color: #696b6e; }
+  .cover .form-control-custom:focus {
+    border: none;
+    background: #fff;
+    color: #46484a; }
+
+@media screen and (max-width: 768px) {
+  .cover h1 {
+    font-size: 3.2rem; }
+  .cover p {
+    font-size: 1.1rem; } }
+
+@media screen and (max-width: 420px) {
+  .cover h1 {
+    font-size: 2.5rem; }
+  .cover p {
+    font-size: 1rem; } }
+
+.cover p {
+  font-size: 1rem; }
+
+.cover-inner {
+  margin: 80px auto 0 auto;
+  vertical-align: middle; }
+
+.social.navbar-nav {
+  padding: 0; }
+
+.social li {
+  display: inline-block; }
+  .social li a {
+    display: block;
+    width: 1.6em;
+    margin: 0 .1em;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #ededed;
+    font-size: 1.1em;
+    line-height: 2em; }
+    .social li a:hover {
+      color: #fff;
+      border-color: #fff; }
+  .social li svg {
+    display: block;
+    width: 1.6em;
+    margin: 0 .1em;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #ededed;
+    font-size: 1.1em;
+    line-height: 2em; }
+    .social li svg:hover {
+      color: #fff;
+      border-color: #fff; }
+
+@media screen and (max-width: 991px) {
+  .social.navbar-nav {
+    margin: 0 auto;
+    display: inline-block; } }
+
+.content {
+  background: #fff;
+  padding-bottom: 0.1rem; }
+  .content .container {
+    margin: 4rem auto 2.5rem auto; }
+  .content .full-width {
+    width: 100%; }
+
+.features-header {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 25px; }
+
+.features-description {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  text-align: center; }
 
 #feaures-and-pricing-selector {
   margin: 30px 15% 25px; }
@@ -652,12 +649,6 @@ a {
   width: 100%;
   text-align: center; }
 
-.plan-header-name {
-  display: inline;
-  font-size: 2.0em;
-  font-weight: 900;
-  color: #9c27b0; }
-
 .plan-header-plan {
   display: inline;
   font-size: 2.0em;
@@ -667,67 +658,16 @@ a {
 .plan-header-value {
   font-size: 0.8em;
   font-weight: 400;
-  color: #999999;
+  color: #999;
   margin: 0 auto; }
 
 .discounted-plan-price {
   text-decoration: line-through;
   font-weight: 700; }
 
-.discounted-plan-percentage {
-  background-color: #e91e63;
-  padding: 6px;
-  margin-left: 10px;
-  font-size: 13px;
-  color: #ffffff; }
-
-.rates-as-low-as {
-  font-size: 24px;
-  font-weight: 500;
-  color: #e91e63; }
-
-.rates-as-low-as-percentage {
-  border: solid 1px #e91e63;
-  color: #e91e63;
-  padding: 4px 7px 7px 7px;
-  margin-left: 4px;
-  font-size: 22px; }
-
-.rates-header-holder {
-  background-color: #9c27b0;
-  height: 30px;
-  text-align: left;
-  margin: 0 -15px; }
-
-.rates-header {
-  color: #ffffff;
-  padding: 5px 0 0 15px;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.1em; }
-
-.features-and-pricing-holder {
-  background-color: #9c27b0;
-  height: 30px;
-  text-align: left;
-  margin: 15px -15px; }
-
-.features-and-pricing-header {
-  color: #FFFFFF;
-  padding: 7px 0 0 25px;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase; }
-
-.rates-divider {
-  background-color: #9c27b0;
-  height: 5px;
-  margin: 0 -15px; }
-
 div .card-and-rates-holder {
   padding: 5px 0;
-  border-bottom: solid 1px #eeeeee; }
+  border-bottom: solid 1px #ededed; }
 
 div .card-brand {
   padding: 0 4px 0 0;
@@ -753,7 +693,7 @@ div .card-brand-rates {
   margin-bottom: 30px;
   border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 
 .block-plain {
@@ -773,7 +713,7 @@ div .card-brand-rates {
     max-width: 440px;
     margin: 0 auto; }
   .block-background .block-caption {
-    color: #ffffff;
+    color: #fff;
     margin-top: 10px; }
   .block-background:not(.block-pricing) .btn {
     margin-bottom: 0; }
@@ -785,8 +725,7 @@ div .card-brand-rates {
   text-align: center; }
   .block-pricing .block-caption {
     margin-top: 10px;
-    font-size: 4.5em;
-    /*line-height: 1.15em;*/ }
+    font-size: 4.5em; }
   .block-pricing .block-caption-bottom {
     margin: 5px auto 0 auto;
     font-size: 4.2em; }
@@ -802,7 +741,7 @@ div .card-brand-rates {
       color: #3c4857;
       text-align: center;
       padding: 6px 0;
-      border-bottom: 1px solid #eeeeee; }
+      border-bottom: 1px solid #ededed; }
       .block-pricing ul li:last-child {
         border: 0; }
       .block-pricing ul li b {
@@ -811,21 +750,21 @@ div .card-brand-rates {
         top: 6px;
         position: relative; }
   .block-pricing.block-background [class*="text-"] {
-    color: #ffffff; }
+    color: #fff; }
   .block-pricing.block-background:after {
     background-color: rgba(0, 0, 0, 0.7); }
   .block-pricing.block-background ul li {
-    color: #ffffff;
+    color: #fff;
     border-color: rgba(255, 255, 255, 0.3); }
     .block-pricing.block-background ul li b {
-      color: #ffffff; }
+      color: #fff; }
   .block-pricing [class*="table-"] [class*="text-"] {
-    color: #ffffff; }
+    color: #fff; }
   .block-pricing [class*="table-"] ul li {
-    color: #ffffff;
+    color: #fff;
     border-color: rgba(255, 255, 255, 0.3); }
     .block-pricing [class*="table-"] ul li b {
-      color: #ffffff; }
+      color: #fff; }
   .block-pricing h1 small {
     font-size: 18px; }
     .block-pricing h1 small:last-child {
@@ -838,48 +777,6 @@ div .card-brand-rates {
       position: relative;
       top: -17px;
       font-size: 26px; }
-
-.partner-btn {
-  border: none;
-  border-radius: 3px;
-  position: relative;
-  padding: 10px 25%;
-  margin: 10px 1px;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  will-change: box-shadow, transform;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-  .partner-btn.btn-round {
-    border-radius: 30px; }
-  .partner-btn.custom-pricing-btn {
-    color: #FFFFFF;
-    background-color: #9c27b0;
-    border-color: #9c27b0;
-    box-shadow: 0 2px 2px 0 #999999, 0 3px 1px -2px #999999, 0 1px 5px 0 #999999;
-    font-size: 1em; }
-    .partner-btn.custom-pricing-btn:focus {
-      box-shadow: 0 14px 26px -12px #999999, 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999999; }
-    .partner-btn.custom-pricing-btn:active {
-      box-shadow: 0 14px 26px -12px #999999, 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999999; }
-    .partner-btn.custom-pricing-btn:hover {
-      box-shadow: 0 14px 26px -12px #999999, 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999999; }
-
-.nav-tabs {
-  margin-bottom: 30px; }
-  .nav-tabs .nav-link.active {
-    background-color: #9c27b0;
-    color: #FFFFFF;
-    box-shadow: 0 16px 26px -10px #999999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999999;
-    border-radius: 20px;
-    font-weight: 600; }
-  .nav-tabs .nav-item.show .nav-link {
-    background-color: #9c27b0;
-    color: #FFFFFF;
-    box-shadow: 0 16px 26px -10px #999999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999999;
-    border-radius: 20px;
-    font-weight: 600; }
 
 .col-md-12 {
   padding-right: 0;
@@ -901,57 +798,4 @@ div .card-brand-rates {
 .nav-pills:not(.nav-pills-icons) > li > a {
   border-radius: 30px;
   font-weight: 400; }
-
-.site-footer {
-  background-color: #242424 !important; }
-  .site-footer .top-footer {
-    background-color: #333131;
-    min-height: 80px;
-    padding-top: 25px;
-    padding-bottom: 30px; }
-  .site-footer .bottom-footer {
-    background-color: #242424;
-    min-height: 120px;
-    padding-top: 30px;
-    padding-bottom: 30px; }
-    .site-footer .bottom-footer .metabank-disclosure {
-      color: #686b6a; }
-  .site-footer .icon {
-    position: relative;
-    text-align: center;
-    width: 0;
-    height: 0;
-    padding: 16px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    color: #242424; }
-    .site-footer .icon i {
-      font-size: 18px;
-      position: absolute;
-      left: 5px;
-      top: 8px;
-      color: #242424; }
-    .site-footer .icon.social {
-      cursor: pointer;
-      background: #ccc;
-      color: #242424; }
-      .site-footer .icon.social:hover {
-        background: #ffffff;
-        color: #242424; }
-      .site-footer .icon.social.fb i {
-        left: 10px;
-        top: 8px; }
-      .site-footer .icon.social.tw i {
-        left: 8px;
-        top: 8px; }
-      .site-footer .icon.social.ins i {
-        left: 8px; }
-      .site-footer .icon.social.in i {
-        left: 9px; }
-      .site-footer .icon.social.pin i {
-        left: 9px; }
-      .site-footer .icon.social.yt i {
-        left: 9px; }
 

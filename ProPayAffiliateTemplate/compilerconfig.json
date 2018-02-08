@@ -10,5 +10,9 @@
   {
     "outputFile": "App_Themes/Default/css/theme.css",
     "inputFile": "App_Themes/Default/css/theme.scss"
+  },
+  {
+    "outputFile": "Content/features-and-pricing.css",
+    "inputFile": "Content/features-and-pricing.scss"
   }
 ]

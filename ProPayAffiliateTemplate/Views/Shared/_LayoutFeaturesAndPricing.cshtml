@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 @{
-    ViewBag.PartnerTheme = "Default";
-    ViewBag.PageTitle = "White Label Template";
-    ViewBag.PageDescription = "";
-    ViewBag.PartnerName = "PROPAY";
+    ViewBag.PartnerTheme = "MaryKay";
+    ViewBag.PageTitle = "Small Business Merchant Account Features &amp; Pricing";
+    ViewBag.PageDescription = "Accept Credit cards anytime, anywhere, in-person, online, mobile.  Payment solutions for Small Businesses. Low rates, free support. Sign up in 5 minutes. Compare to Square &amp; PayPal.";
+    ViewBag.PartnerName = "Mary Kay";
 
     ViewBag.PartnerGoogleTagManagerID = "GTM-MZ8MRT";
     ViewBag.GoogleUniversalID = "UA-12739219-14";
@@ -71,10 +71,8 @@
         .footer p {font-size: 12px;color: rgba(255, 255, 255, 0.6);margin: 10px 8px;}
         .footer .nav-footer .nav-link {@Html.Raw(ViewBag.ButtonTextColor);}
         .footer .nav-footer .nav-link:hover {color: rgba(255, 255, 255, 0.9); }
-
     </style>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="~/App_Themes/@ViewBag.PartnerTheme/css/pricing-table.min.css" rel="stylesheet" />
+    <link href="~/Content/features-and-pricing.css" rel="stylesheet" />
     @{
         Html.RenderPartial("_AnalyticsGoogleTagManager");
         Html.RenderPartial("_AnalyticsBingVerificationTag");
@@ -88,7 +86,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container">
                 <a class="navbar-brand text-shadow-half" href="Index">@Html.Raw(ViewBag.PartnerName)</a>
-                <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">?</button>
+                <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbar-4">
                     <ul class="social navbar-nav mt-2 mt-md-0">
                         @{
@@ -201,7 +199,7 @@
         </div>
     </footer>
 
-    <script src="~/Scripts/bootstrap/jquery.min.js"></script>
-    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
