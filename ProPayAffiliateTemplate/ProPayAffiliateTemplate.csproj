@@ -149,16 +149,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\Default\css\pricing-table.css">
-      <DependentUpon>pricing-table.scss</DependentUpon>
-    </Content>
-    <Content Include="App_Themes\Default\css\pricing-table.min.css">
-      <DependentUpon>pricing-table.css</DependentUpon>
-    </Content>
-    <Content Include="App_Themes\Default\css\theme.css" />
-    <Content Include="App_Themes\Default\css\theme.min.css" />
-    <Content Include="App_Themes\Default\img\bg.jpg" />
-    <Content Include="App_Themes\Default\img\cover.jpg" />
+    <Content Include="App_Themes\Default\img\hero.jpg" />
     <Content Include="App_Themes\Default\img\feature-1.png" />
     <Content Include="App_Themes\Default\img\feature-2.png" />
     <Content Include="App_Themes\Default\img\feature-3.png" />
@@ -166,11 +157,9 @@
     <Content Include="App_Themes\Default\img\feature-5.png" />
     <Content Include="App_Themes\Default\img\feature-6.png" />
     <Content Include="App_Themes\Default\img\features-bg.jpg" />
-    <Content Include="App_Themes\Default\img\gadgets.png" />
     <Content Include="App_Themes\Default\img\logo-nav.png" />
     <Content Include="App_Themes\Default\img\logo.png" />
-    <Content Include="App_Themes\Default\img\parallax-bg.jpg" />
-    <Content Include="App_Themes\MaryKay\img\bg.jpg" />
+    <Content Include="App_Themes\MaryKay\img\hero.jpg" />
     <Content Include="App_Themes\MaryKay\img\feature-1.png" />
     <Content Include="App_Themes\MaryKay\img\feature-2.png" />
     <Content Include="App_Themes\MaryKay\img\feature-3.png" />
@@ -180,6 +169,15 @@
     <Content Include="App_Themes\MaryKay\img\features-bg.jpg" />
     <Content Include="App_Themes\MaryKay\img\logo-nav.png" />
     <Content Include="App_Themes\MaryKay\img\logo.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-1.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-2.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-3.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-4.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-5.png" />
+    <Content Include="App_Themes\ThirtyOne\img\feature-6.png" />
+    <Content Include="App_Themes\ThirtyOne\img\hero.jpg" />
+    <Content Include="App_Themes\ThirtyOne\img\logo-nav.png" />
+    <Content Include="App_Themes\ThirtyOne\img\logo.png" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\bootstrap\pricing-table.css" />
     <Content Include="Content\features-and-pricing.css">
@@ -189,26 +187,12 @@
       <DependentUpon>features-and-pricing.css</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\social_icons_Facebook.png" />
-    <Content Include="Images\social_icons_Facebook_hover.png" />
-    <Content Include="Images\social_icons_Instagram.png" />
-    <Content Include="Images\social_icons_Instagram_hover.png" />
-    <Content Include="Images\social_icons_LinkedIn.png" />
-    <Content Include="Images\social_icons_LinkedIn_hover.png" />
-    <Content Include="Images\social_icons_Pinterest.png" />
-    <Content Include="Images\social_icons_Pinterest_hover.png" />
-    <Content Include="Images\social_icons_Twitter.png" />
-    <Content Include="Images\social_icons_Twitter_hover.png" />
-    <Content Include="Images\social_icons_YouTube.png" />
-    <Content Include="Images\social_icons_YouTube_hover.png" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap\jquery.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -223,21 +207,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Themes\MaryKay\css\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\Default\css\theme.scss" />
-    <Content Include="App_Themes\Default\css\pricing-table.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Content\features-and-pricing.scss" />
     <None Include="packages.config" />
     <Content Include="Views\Home\PricingTwo.cshtml" />

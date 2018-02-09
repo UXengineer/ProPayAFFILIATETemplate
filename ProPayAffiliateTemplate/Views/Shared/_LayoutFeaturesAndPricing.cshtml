@@ -1,20 +1,23 @@
 ﻿<!DOCTYPE html>
 @{
+    //ViewBag.PartnerTheme = "Default";
     ViewBag.PartnerTheme = "MaryKay";
+    //ViewBag.PartnerTheme = "ThirtyOne";
     ViewBag.PageTitle = "Small Business Merchant Account Features &amp; Pricing";
     ViewBag.PageDescription = "Accept Credit cards anytime, anywhere, in-person, online, mobile.  Payment solutions for Small Businesses. Low rates, free support. Sign up in 5 minutes. Compare to Square &amp; PayPal.";
     ViewBag.PartnerName = "Mary Kay";
 
-    ViewBag.PartnerGoogleTagManagerID = "GTM-MZ8MRT";
-    ViewBag.GoogleUniversalID = "UA-12739219-14";
-    ViewBag.PartnerBingValidationID = "90F39A1349E577CF8C33173B061B6A01";
+    ViewBag.PartnerGoogleTagManagerID = "GTM-MZ8MRT";  // ????????? This is the Partner's Google Tag Manager associated with the custom URL and Tag Manager View
+    ViewBag.GoogleUniversalID = "UA-12739219-14"; // ????????? Use the Google Universal ID for Partners using legacy Google analytics
+    ViewBag.PartnerBingValidationID = "90F39A1349E577CF8C33173B061B6A01"; // ????????? Bing Ownership Verification tag associated with the URL.
 
     //CUSTOM Colors
-    //ViewBag.MainThemeColor = "#0080a6"; //ProPay Blue
-    //ViewBag.MainThemeColor = "#9fc163"; //ProPay Green
+    //ViewBag.MainThemeColor = "#0080a6"; //Default ProPay Blue
+    //ViewBag.MainThemeColor = "#9fc163"; //Default ProPay Green
     ViewBag.MainThemeColor = "#ef477e"; //MaryKay Pink
-    ViewBag.ButtonTextColor = "#FFFFFF";
-    ViewBag.ButtonRadius = "30";
+    //ViewBag.MainThemeColor = "#e01580"; //31Giftys
+    ViewBag.ButtonTextColor = "#FFFFFF";  // ????????? This is the font color used on all the buttons in the HERO image and Features and Pricing tables
+    ViewBag.ButtonRadius = "0";  // ????????? This Radius changes the round border for buttons found over the the HERO image.
 
     //Hero Banner
     ViewBag.SignUpButtonLabel = "Sign Up";
@@ -82,10 +85,10 @@
     @{
         Html.RenderPartial("_AnalyticsGoogleTagManagerConfirmation");
     }
-    <section style="background: #3d354f url('../../App_Themes/@ViewBag.PartnerTheme/img/cover.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;">
+    <section style="background: #3d354f url('../../App_Themes/@ViewBag.PartnerTheme/img/hero.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container">
-                <a class="navbar-brand text-shadow-half" href="Index">@Html.Raw(ViewBag.PartnerName)</a>
+                <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@ViewBag.PartnerTheme/img/logo-nav.png" /></a>
                 <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbar-4">
                     <ul class="social navbar-nav mt-2 mt-md-0">

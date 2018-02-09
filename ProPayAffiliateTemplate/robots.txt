@@ -1,0 +1,6 @@
+﻿User-Agent: *
+Disallow: /App_Themes
+Disallow: /Content
+Disallow: /Images
+Disallow: /Scripts
+
