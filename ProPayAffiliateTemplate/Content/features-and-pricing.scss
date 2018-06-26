@@ -43,25 +43,11 @@ $white_30: rgba(255, 255, 255, 0.3);
 $black_70: rgba(0, 0, 0, 0.7);
 $body_color: $color_gravel_approx;
 
-.white {
-    color: $white;
-}
-
-.black {
-    color: $black;
-}
-
-.text-shadow {
-    text-shadow: 1px 1px 1px $black_87;
-}
-
-.text-shadow-half {
-    text-shadow: 1px 1px 1px $black_56;
-}
-
-.text-shadow-onethird {
-    text-shadow: 1px 1px 1px $black_33;
-}
+.white {color: $white;}
+.black {color: $black;}
+.text-shadow {text-shadow: 1px 1px 1px $black_87;}
+.text-shadow-half {text-shadow: 1px 1px 1px $black_56;}
+.text-shadow-onethird {text-shadow: 1px 1px 1px $black_33;}
 
 // 2- CUSTOM SIZING DEFINITIONS ******************************************** /
 $zeropx: 0px;
@@ -700,6 +686,13 @@ h5 {
     font-weight: 500;
 }
 
+hr.divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: solid 1px #EEE;
+}
+
 // 7- CUSTOM NAVBAR DEFINITIONS ******************************************** /
 //a.navbar-brand, a.logo
 %extend_1 {
@@ -1056,6 +1049,12 @@ div {
     .block-caption {
         margin-top: 10px;
         font-size: 4.5em;
+        margin-bottom: 0;
+    }
+
+    .per-month-label {
+        color: $color_tapa_approx;
+        margin: -5px 0 0 5px;
     }
 
     .block-caption-bottom {

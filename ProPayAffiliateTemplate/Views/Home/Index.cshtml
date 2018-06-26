@@ -2,42 +2,833 @@
 @{
     Layout = "~/Views/Shared/_LayoutFeaturesAndPricing.cshtml";
 
-    ViewBag.MonthlyPlan1 = "SILVER";
+    //COMMON VARIABLES
+    ViewBag.CurrencySymbolLabel = "$";
+    ViewBag.PercentageSymbolLabel = "%";
+    ViewBag.RatesFeesAndLimitsModalHeaderLabel = "Rates, Fees &amp; Limits";
     ViewBag.MonthlyPlanLabel = "PLAN";
-    ViewBag.MonthlyPlan1DescriptionLabel = "Best starting value!";
+    ViewBag.AvailableFeaturesLabel = "Available Features";
+    ViewBag.CardRatesHeaderLabel = "Card Reader Rates";
+    ViewBag.StandardRatesHeaderLabel = "Standard Rates";
+    ViewBag.TransferFeesHeaderLabel = "Fees";
+    ViewBag.LimitsHeaderLabel = "Limits";
+    ViewBag.SelectButtonLabel = "SELECT";
+    ViewBag.MonthlyPlanSaveLabel = "Save";
+    ViewBag.YearlyPlanSaveLabel = "Save";
+
+    //SILVER PLAN
+    ViewBag.MonthlyPlan1 = "SILVER";
     ViewBag.MonthlyPlan1RateAsLowAsLabel = "rate as low as";
     ViewBag.MonthlyPlan1LowestRateLabel = "2.29";
     ViewBag.MonthlyPlan1CurrentPriceLabel = "3.95";
     ViewBag.MonthlyPlan1CurrentTermLabel = "per month";
     ViewBag.MonthlyPlan1FullPriceLabel = "4.35";
     ViewBag.MonthlyPlan1SavePercentageLabel = "10";
+
+    ViewBag.MonthlyPlan1Feature1 = "ProPay JAK Included";
+    ViewBag.MonthlyPlan1Feature2 = "Funds Available in 24 Hours";
+    ViewBag.MonthlyPlan1Feature3 = "PrePaid Card";
+    ViewBag.MonthlyPlan1Feature4 = "Stored Card";
+    ViewBag.MonthlyPlan1Feature5 = "Donate &amp; Buy It Now Buttons";
+    ViewBag.MonthlyPlan1Feature6 = "Competitive Rates &amp; Fees";
+
+    //SILVER MODAL CUSTOM VALUES
+    ViewBag.MonthlyPlan1Card1Label = "Visa";
+    ViewBag.MonthlyPlan1Card1PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan1Card1RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan1Card2Label = "MasterCard";
+    ViewBag.MonthlyPlan1Card2PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan1Card2RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan1Card3Label = "Discover";
+    ViewBag.MonthlyPlan1Card3PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan1Card3RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan1Card4Label = "American Express";
+    ViewBag.MonthlyPlan1Card4PercentageLabel = "3.39";
+    ViewBag.MonthlyPlan1Card4RateCostLabel = "0.00";
+
+    ViewBag.MonthlyPlan1StandardRateCard1Label = "Visa";
+    ViewBag.MonthlyPlan1StandardRate1PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan1StandardRate1CostLabel = "0.00";
+    ViewBag.MonthlyPlan1StandardRateCard2Label = "MasterCard";
+    ViewBag.MonthlyPlan1StandardRate2PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan1StandardRate2CostLabel = "0.00";
+    ViewBag.MonthlyPlan1StandardRateCard3Label = "Discover";
+    ViewBag.MonthlyPlan1StandardRate3PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan1StandardRate3CostLabel = "0.00";
+    ViewBag.MonthlyPlan1StandardRateCard4Label = "American Express";
+    ViewBag.MonthlyPlan1StandardRate4PercentageLabel = "3.40";
+    ViewBag.MonthlyPlan1StandardRate4CostLabel = "0.00";
+
+    ViewBag.MonthlyPlan1BankTransferFeeLabel = "Bank Transfer Fee";
+    ViewBag.MonthlyPlan1BankTransferFeeCostLabel = "0.10";
+    ViewBag.MonthlyPlan1AccountRenewalFeeLabel = "Account Renewal Fee";
+    ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel = "29.95";
+    ViewBag.MonthlyPlan1ATMFeeLabel = "ATM Fee";
+    ViewBag.MonthlyPlan1ATMFeeCostLabel = "2.50";
+    ViewBag.MonthlyPlan1PPMCFeeLabel = "PPMC ATM Fee";
+    ViewBag.MonthlyPlan1PPMCFeeCostLabel = "2.50";
+
+    ViewBag.MonthlyPlan1Limit1PerTransactionLabel = "Per Transaction Limit";
+    ViewBag.MonthlyPlan1Limit1AmountLabel = "500.00";
+    ViewBag.MonthlyPlan1Limit1PerMonthLabel = "Monthly Limit";
+    ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel = "3,000.00";
+
+
+    //GOLD
     ViewBag.MonthlyPlan2 = "GOLD";
-    ViewBag.MonthlyPlan2DescriptionLabel = "Best starting value!";
     ViewBag.MonthlyPlan2RateAsLowAsLabel = "rate as low as";
     ViewBag.MonthlyPlan2LowestRateLabel = "2.29";
     ViewBag.MonthlyPlan2CurrentPriceLabel = "5.95";
+    ViewBag.MonthlyPlan2CurrentTermLabel = "per month";
     ViewBag.MonthlyPlan2FullPriceLabel = "6.65";
+    ViewBag.MonthlyPlan2SavePercentageLabel = "10";
+
+    ViewBag.MonthlyPlan2Feature1 = "ProPay JAK Included";
+    ViewBag.MonthlyPlan2Feature2 = "Funds Available in 24 Hours";
+    ViewBag.MonthlyPlan2Feature3 = "PrePaid Card";
+    ViewBag.MonthlyPlan2Feature4 = "Stored Card";
+    ViewBag.MonthlyPlan2Feature5 = "Donate &amp; Buy It Now Buttons";
+    ViewBag.MonthlyPlan2Feature6 = "Competitive Rates &amp; Fees";
+
+    //PLATINUM MODAL CUSTOM VALUES
+    ViewBag.MonthlyPlan2Card1Label = "Visa";
+    ViewBag.MonthlyPlan2Card1PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan2Card1RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan2Card2Label = "MasterCard";
+    ViewBag.MonthlyPlan2Card2PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan2Card2RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan2Card3Label = "Discover";
+    ViewBag.MonthlyPlan2Card3PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan2Card3RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan2Card4Label = "American Express";
+    ViewBag.MonthlyPlan2Card4PercentageLabel = "3.39";
+    ViewBag.MonthlyPlan2Card4RateCostLabel = "0.00";
+
+    ViewBag.MonthlyPlan2StandardRateCard1Label = "Visa";
+    ViewBag.MonthlyPlan2StandardRate1PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan2StandardRate1CostLabel = "0.00";
+    ViewBag.MonthlyPlan2StandardRateCard2Label = "MasterCard";
+    ViewBag.MonthlyPlan2StandardRate2PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan2StandardRate2CostLabel = "0.00";
+    ViewBag.MonthlyPlan2StandardRateCard3Label = "Discover";
+    ViewBag.MonthlyPlan2StandardRate3PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan2StandardRate3CostLabel = "0.00";
+    ViewBag.MonthlyPlan2StandardRateCard4Label = "American Express";
+    ViewBag.MonthlyPlan2StandardRate4PercentageLabel = "3.40";
+    ViewBag.MonthlyPlan2StandardRate4CostLabel = "0.00";
+
+    ViewBag.MonthlyPlan2BankTransferFeeLabel = "Bank Transfer Fee";
+    ViewBag.MonthlyPlan2BankTransferFeeCostLabel = "0.10";
+    ViewBag.MonthlyPlan2AccountRenewalFeeLabel = "Account Renewal Fee";
+    ViewBag.MonthlyPlan2AccountRenewalFeeCostLabel = "29.95";
+    ViewBag.MonthlyPlan2ATMFeeLabel = "ATM Fee";
+    ViewBag.MonthlyPlan2ATMFeeCostLabel = "2.50";
+    ViewBag.MonthlyPlan2PPMCFeeLabel = "PPMC ATM Fee";
+    ViewBag.MonthlyPlan2PPMCFeeCostLabel = "2.50";
+
+    ViewBag.MonthlyPlan2Limit1PerTransactionLabel = "Per Transaction Limit";
+    ViewBag.MonthlyPlan2Limit1AmountLabel = "500.00";
+    ViewBag.MonthlyPlan2Limit1PerMonthLabel = "Monthly Limit";
+    ViewBag.MonthlyPlan2Limit1PerMonthAmountLabel = "3,000.00";
+
+
+    //PLATINUM
     ViewBag.MonthlyPlan3 = "PLATINUM";
-    ViewBag.MonthlyPlan3DescriptionLabel = "Best starting value!";
     ViewBag.MonthlyPlan3RateAsLowAsLabel = "rate as low as";
     ViewBag.MonthlyPlan3LowestRateLabel = "2.29";
     ViewBag.MonthlyPlan3CurrentPriceLabel = "9.95";
+    ViewBag.MonthlyPlan3CurrentTermLabel = "per month";
     ViewBag.MonthlyPlan3FullPriceLabel = "10.95";
-    ViewBag.SelectButtonLabel = "SELECT";
-    ViewBag.GetItNowButtonLabel = "Get It Now";
+    ViewBag.MonthlyPlan3SavePercentageLabel = "10";
 
-    ViewBag.MonthlyPlanSaveLabel = "Save";
+    ViewBag.MonthlyPlan3Feature1 = "ProPay JAK Included";
+    ViewBag.MonthlyPlan3Feature2 = "Funds Available in 24 Hours";
+    ViewBag.MonthlyPlan3Feature3 = "PrePaid Card";
+    ViewBag.MonthlyPlan3Feature4 = "Stored Card";
+    ViewBag.MonthlyPlan3Feature5 = "Donate &amp; Buy It Now Buttons";
+    ViewBag.MonthlyPlan3Feature6 = "Competitive Rates &amp; Fees";
 
-    //FEATURES
-    ViewBag.AvailableFeaturesLabel = "Available Features";
-    ViewBag.Feature1 = "Online Terminal";
-    ViewBag.Feature2 = "Mobile Application";
-    ViewBag.Feature3 = "Mobile Website";
-    ViewBag.Feature4 = "Touchtone Phone";
-    ViewBag.Feature5 = "Buy It Now Button";
-    ViewBag.Feature6 = "Donate Now Button";
-    ViewBag.Feature7 = "Stored Cards";
+    //PLATINUM MODAL CUSTOM VALUES
+    ViewBag.MonthlyPlan3Card1Label = "Visa";
+    ViewBag.MonthlyPlan3Card1PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan3Card1RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan3Card2Label = "MasterCard";
+    ViewBag.MonthlyPlan3Card2PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan3Card2RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan3Card3Label = "Discover";
+    ViewBag.MonthlyPlan3Card3PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan3Card3RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan3Card4Label = "American Express";
+    ViewBag.MonthlyPlan3Card4PercentageLabel = "3.39";
+    ViewBag.MonthlyPlan3Card4RateCostLabel = "0.00";
+
+    ViewBag.MonthlyPlan3StandardRateCard1Label = "Visa";
+    ViewBag.MonthlyPlan3StandardRate1PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan3StandardRate1CostLabel = "0.00";
+    ViewBag.MonthlyPlan3StandardRateCard2Label = "MasterCard";
+    ViewBag.MonthlyPlan3StandardRate2PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan3StandardRate2CostLabel = "0.00";
+    ViewBag.MonthlyPlan3StandardRateCard3Label = "Discover";
+    ViewBag.MonthlyPlan3StandardRate3PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan3StandardRate3CostLabel = "0.00";
+    ViewBag.MonthlyPlan3StandardRateCard4Label = "American Express";
+    ViewBag.MonthlyPlan3StandardRate4PercentageLabel = "3.40";
+    ViewBag.MonthlyPlan3StandardRate4CostLabel = "0.00";
+
+    ViewBag.MonthlyPlan3BankTransferFeeLabel = "Bank Transfer Fee";
+    ViewBag.MonthlyPlan3BankTransferFeeCostLabel = "0.10";
+    ViewBag.MonthlyPlan3AccountRenewalFeeLabel = "Account Renewal Fee";
+    ViewBag.MonthlyPlan3AccountRenewalFeeCostLabel = "29.95";
+    ViewBag.MonthlyPlan3ATMFeeLabel = "ATM Fee";
+    ViewBag.MonthlyPlan3ATMFeeCostLabel = "2.50";
+    ViewBag.MonthlyPlan3PPMCFeeLabel = "PPMC ATM Fee";
+    ViewBag.MonthlyPlan3PPMCFeeCostLabel = "2.50";
+
+    ViewBag.MonthlyPlan3Limit1PerTransactionLabel = "Per Transaction Limit";
+    ViewBag.MonthlyPlan3Limit1AmountLabel = "500.00";
+    ViewBag.MonthlyPlan3Limit1PerMonthLabel = "Monthly Limit";
+    ViewBag.MonthlyPlan3Limit1PerMonthAmountLabel = "3,000.00";
+
+    //YEARLY SILVER PLAN
+    ViewBag.YearlyPlan1 = "SILVER";
+    ViewBag.YearlyPlan1RateAsLowAsLabel = "rate as low as";
+    ViewBag.YearlyPlan1LowestRateLabel = "2.29";
+    ViewBag.YearlyPlan1CurrentPriceLabel = "29.99";
+    ViewBag.YearlyPlan1CurrentTermLabel = "per year";
+    ViewBag.YearlyPlan1FullPriceLabel = "32.99";
+    ViewBag.YearlyPlan1SavePercentageLabel = "10";
+
+    ViewBag.YearlyPlan1Feature1 = "ProPay JAK Included";
+    ViewBag.YearlyPlan1Feature2 = "Funds Available in 24 Hours";
+    ViewBag.YearlyPlan1Feature3 = "PrePaid Card";
+    ViewBag.YearlyPlan1Feature4 = "Stored Card";
+    ViewBag.YearlyPlan1Feature5 = "Donate &amp; Buy It Now Buttons";
+    ViewBag.YearlyPlan1Feature6 = "Competitive Rates &amp; Fees";
+
+    //YEARLY PLATINUM PLAN
+    ViewBag.YearlyPlan2 = "PLATINUM";
+    ViewBag.YearlyPlan2RateAsLowAsLabel = "rate as low as";
+    ViewBag.YearlyPlan2LowestRateLabel = "2.29";
+    ViewBag.YearlyPlan2CurrentPriceLabel = "34.99";
+    ViewBag.YearlyPlan2CurrentTermLabel = "per year";
+    ViewBag.YearlyPlan2FullPriceLabel = "38.49";
+    ViewBag.YearlyPlan2SavePercentageLabel = "10";
+
+    ViewBag.YearlyPlan2Feature1 = "ProPay JAK Included";
+    ViewBag.YearlyPlan2Feature2 = "Funds Available in 24 Hours";
+    ViewBag.YearlyPlan2Feature3 = "PrePaid Card";
+    ViewBag.YearlyPlan2Feature4 = "Stored Card";
+    ViewBag.YearlyPlan2Feature5 = "Donate &amp; Buy It Now Buttons";
+    ViewBag.YearlyPlan2Feature6 = "Competitive Rates &amp; Fees";
+
 }
+
+@* ********* SMALL MODAL ********* *@
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container no-padding">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h5 class="modal-title-custom">Card Reader Rates</h5>
+                            <hr />
+                            <div class="row clearfix"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h5 class="modal-title-custom">Standard Rates</h5>
+                            <hr />
+                            <div class="row clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ********* BASIC MODAL ********* *@
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="border:dotted 1px red;">
+                <div class="container no-padding">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h5 class="modal-title-custom">Card Reader Rates</h5>
+                            <hr />
+                            <div class="row clearfix"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h5 class="modal-title-custom">Standard Rates</h5>
+                            <hr />
+                            <div class="row clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+@* ********* SILVER PLAN MODAL ********* *@
+<div class="modal fade" id="SilverPlan" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container p0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.CardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card1RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card2RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card3RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card4RateCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.StandardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate1CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate2CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate3CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate4CostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix pt30"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.TransferFeesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1ATMFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1ATMFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.LimitsHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerTransactionLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1AmountLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ********* GOLD PLAN MODAL ********* *@
+<div class="modal fade" id="GoldPlan" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container p0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.CardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card1RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card2RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card3RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card4RateCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.StandardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate1CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate2CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate3CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate4CostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix pt30"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.TransferFeesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1ATMFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1ATMFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.LimitsHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerTransactionLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1AmountLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ********* PLATINUM PLAN MODAL ********* *@
+<div class="modal fade" id="PlatinumPlan" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container p0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.CardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card1RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card2RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card3RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card4RateCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.StandardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate1CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate2CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate3CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate4CostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix pt30"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.TransferFeesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1ATMFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1ATMFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.LimitsHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerTransactionLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1AmountLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ********* YEARLY SILVER PLAN MODAL ********* *@
+<div class="modal fade" id="YearlySilverPlan" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container p0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.CardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card1RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card2RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card3RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card4RateCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.StandardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate1CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate2CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate3CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate4CostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix pt30"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.TransferFeesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1ATMFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1ATMFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.LimitsHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerTransactionLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1AmountLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ********* YEARLY PLATINUM PLAN MODAL ********* *@
+<div class="modal fade" id="YearlyPlatinumPlan" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title modal-title-custom" id="myModalLabel">@Html.Raw(ViewBag.RatesFeesAndLimitsModalHeaderLabel)</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container p0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.CardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card1RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card2PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card2RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card3PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card3RateCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Card4PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Card4RateCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.StandardRatesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard1Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate1CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard2Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate2CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard3Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate3CostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRateCard4Label):</div>
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1StandardRate1PercentageLabel)@Html.Raw(ViewBag.PercentageSymbolLabel)+@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1StandardRate4CostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix pt30"></div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.TransferFeesHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1BankTransferFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1AccountRenewalFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1ATMFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1ATMFeeCostLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1PPMCFeeCostLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md col-lg">
+                            <div class="clearfix pt30 d-md-none d-lg-none d-xl-none"></div>
+                            <h2 class="modal-title-custom">@Html.Raw(ViewBag.LimitsHeaderLabel)</h2>
+                            <hr class="divider" />
+                            <div class="container f14">
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerTransactionLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1AmountLabel)</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthLabel):</div>
+                                    <div class="col">@Html.Raw(ViewBag.CurrencySymbolLabel)@Html.Raw(ViewBag.MonthlyPlan1Limit1PerMonthAmountLabel)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn close-modal-button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <article class="col-md-12">
     <div class="section-gray">
@@ -67,11 +858,20 @@
                                                     <div class="display-block">
                                                         <span class="plan-header-name">@Html.Raw(ViewBag.MonthlyPlan1)</span>
                                                         <span class="plan-header-plan">@Html.Raw(ViewBag.MonthlyPlanLabel)</span>
-                                                        <div class="plan-header-value">@Html.Raw(ViewBag.MonthlyPlan1DescriptionLabel)</div>
+                                                    </div>
+                                                    <div class="text-center mt10">
+                                                        <div class="display-inline">
+                                                            was @Html.Raw(ViewBag.CurrencySymbolLabel)<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan1FullPriceLabel)</span>
+                                                            <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan1SavePercentageLabel)%</span>
+                                                        </div>
+                                                        <div class="row clearfix"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h1 class="block-caption"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan1CurrentPriceLabel)</h1>
+                                            <div class="display-block">
+                                                <h1 class="block-caption"><small>@Html.Raw(ViewBag.CurrencySymbolLabel)</small>@Html.Raw(ViewBag.MonthlyPlan1CurrentPriceLabel)</h1>
+                                                <div class="per-month-label">@Html.Raw(ViewBag.MonthlyPlan1CurrentTermLabel)</div>
+                                            </div>
                                             <div class="text-center ptb15">
                                                 <div class="display-inline">
                                                     <span class="color-red">*</span> @Html.Raw(ViewBag.MonthlyPlan1RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.MonthlyPlan1LowestRateLabel)%</span>
@@ -84,30 +884,18 @@
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li>@Html.Raw(ViewBag.Feature1)</li>
-                                                <li>@Html.Raw(ViewBag.Feature2)</li>
-                                                <li>@Html.Raw(ViewBag.Feature3)</li>
-                                                <li>@Html.Raw(ViewBag.Feature4)</li>
-                                                <li>@Html.Raw(ViewBag.Feature5)</li>
-                                                <li>@Html.Raw(ViewBag.Feature6)</li>
-                                                <li>@Html.Raw(ViewBag.Feature7)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan1Feature1)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan1Feature2)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan1Feature3)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan1Feature4)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan1Feature5)</li>
+                                                <li><a href="#" data-toggle="modal" data-target="#SilverPlan">@Html.Raw(ViewBag.MonthlyPlan1Feature6)</a> *</li>
                                             </ul>
-                                            <div class="rates-divider"></div>
-                                            <h1 class="block-caption-bottom"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan1CurrentPriceLabel)<small>@Html.Raw(ViewBag.MonthlyPlan1CurrentTermLabel)</small></h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
-                                                <div class="display-inline">
-                                                    <div>
-                                                        was $<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan1FullPriceLabel)</span>
-                                                        <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan1SavePercentageLabel)%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.MonthlyPlan1)','event': 'Get It Now'});">@Html.Raw(ViewBag.GetItNowButtonLabel)</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm">
-                                    @*GOLD PLAN*@
+                                    @*YEARLY SILVER PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
                                             <div class="row plan-header">
@@ -115,14 +903,23 @@
                                                     <div class="display-block">
                                                         <span class="plan-header-name">@Html.Raw(ViewBag.MonthlyPlan2)</span>
                                                         <span class="plan-header-plan">@Html.Raw(ViewBag.MonthlyPlanLabel)</span>
-                                                        <div class="plan-header-value">@Html.Raw(ViewBag.MonthlyPlan2DescriptionLabel)</div>
+                                                    </div>
+                                                    <div class="text-center mt10">
+                                                        <div class="display-inline">
+                                                            was @Html.Raw(ViewBag.CurrencySymbolLabel)<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan2FullPriceLabel)</span>
+                                                            <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan2SavePercentageLabel)%</span>
+                                                        </div>
+                                                        <div class="row clearfix"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h1 class="block-caption"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan2CurrentPriceLabel)</h1>
+                                            <div class="display-block">
+                                                <h1 class="block-caption"><small>@Html.Raw(ViewBag.CurrencySymbolLabel)</small>@Html.Raw(ViewBag.MonthlyPlan2CurrentPriceLabel)</h1>
+                                                <div class="per-month-label">@Html.Raw(ViewBag.MonthlyPlan2CurrentTermLabel)</div>
+                                            </div>
                                             <div class="text-center ptb15">
                                                 <div class="display-inline">
-                                                    <span class="color-red">*</span> @Html.Raw(ViewBag.MonthlyPlan2RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.MonthlyPlan2LowestRateLabel)%</span>
+                                                    <span class="color-red">*</span> @Html.Raw(ViewBag.MonthlyPlan1RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.MonthlyPlan2LowestRateLabel)%</span>
                                                 </div>
                                             </div>
                                             <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.MonthlyPlan2)','event': 'Selected'});">@Html.Raw(ViewBag.SelectButtonLabel)</button>
@@ -132,43 +929,39 @@
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li>@Html.Raw(ViewBag.Feature1)</li>
-                                                <li>@Html.Raw(ViewBag.Feature2)</li>
-                                                <li>@Html.Raw(ViewBag.Feature3)</li>
-                                                <li>@Html.Raw(ViewBag.Feature4)</li>
-                                                <li>@Html.Raw(ViewBag.Feature5)</li>
-                                                <li>@Html.Raw(ViewBag.Feature6)</li>
-                                                <li>@Html.Raw(ViewBag.Feature7)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan2Feature1)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan2Feature2)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan2Feature3)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan2Feature4)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan2Feature5)</li>
+                                                <li><a href="#" data-toggle="modal" data-target="#GoldPlan">@Html.Raw(ViewBag.MonthlyPlan2Feature6)</a> *</li>
                                             </ul>
-                                            <div class="rates-divider"></div>
-                                            <h1 class="block-caption-bottom"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan2CurrentPriceLabel)<small>@Html.Raw(ViewBag.MonthlyPlan2CurrentTermLabel)</small></h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
-                                                <div class="display-inline">
-                                                    <div>
-                                                        was $<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan2FullPriceLabel)</span>
-                                                        <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan2SavePercentageLabel)%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.MonthlyPlan2)','event': 'Get It Now'});">@Html.Raw(ViewBag.GetItNowButtonLabel)</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm">
-                                    @*PLATINUM PLAN*@
+                                    @*YEARLY PLATINUM PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
                                             <div class="row plan-header">
                                                 <div class="plan-header-holder">
                                                     <div class="display-block">
-                                                        @*class="plan-header-name"*@
                                                         <span class="plan-header-name">@Html.Raw(ViewBag.MonthlyPlan3)</span>
                                                         <span class="plan-header-plan">@Html.Raw(ViewBag.MonthlyPlanLabel)</span>
-                                                        <div class="plan-header-value">@Html.Raw(ViewBag.MonthlyPlan3DescriptionLabel)</div>
+                                                    </div>
+                                                    <div class="text-center mt10">
+                                                        <div class="display-inline">
+                                                            was @Html.Raw(ViewBag.CurrencySymbolLabel)<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan3FullPriceLabel)</span>
+                                                            <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan3SavePercentageLabel)%</span>
+                                                        </div>
+                                                        <div class="row clearfix"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h1 class="block-caption"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan3CurrentPriceLabel)</h1>
+                                            <div class="display-block">
+                                                <h1 class="block-caption"><small>@Html.Raw(ViewBag.CurrencySymbolLabel)</small>@Html.Raw(ViewBag.MonthlyPlan3CurrentPriceLabel)</h1>
+                                                <div class="per-month-label">@Html.Raw(ViewBag.MonthlyPlan3CurrentTermLabel)</div>
+                                            </div>
                                             <div class="text-center ptb15">
                                                 <div class="display-inline">
                                                     <span class="color-red">*</span> @Html.Raw(ViewBag.MonthlyPlan3RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.MonthlyPlan3LowestRateLabel)%</span>
@@ -181,25 +974,13 @@
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li>@Html.Raw(ViewBag.Feature1)</li>
-                                                <li>@Html.Raw(ViewBag.Feature2)</li>
-                                                <li>@Html.Raw(ViewBag.Feature3)</li>
-                                                <li>@Html.Raw(ViewBag.Feature4)</li>
-                                                <li>@Html.Raw(ViewBag.Feature5)</li>
-                                                <li>@Html.Raw(ViewBag.Feature6)</li>
-                                                <li>@Html.Raw(ViewBag.Feature7)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan3Feature1)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan3Feature2)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan3Feature3)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan3Feature4)</li>
+                                                <li>@Html.Raw(ViewBag.MonthlyPlan3Feature5)</li>
+                                                <li><a href="#" data-toggle="modal" data-target="#PlatinumPlan">@Html.Raw(ViewBag.MonthlyPlan3Feature6)</a> *</li>
                                             </ul>
-                                            <div class="rates-divider"></div>
-                                            <h1 class="block-caption-bottom"><small>$</small>@Html.Raw(ViewBag.MonthlyPlan3CurrentPriceLabel)<small>@Html.Raw(ViewBag.MonthlyPlan3CurrentTermLabel)</small></h1>
-                                            <div class="text-center ptb15">
-                                                <div class="display-inline">
-                                                    <div>
-                                                        was $<span class="discounted-plan-price">@Html.Raw(ViewBag.MonthlyPlan3FullPriceLabel)</span>
-                                                        <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.MonthlyPlan3SavePercentageLabel)%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.MonthlyPlan3)','event': 'Get It Now'});">@Html.Raw(ViewBag.GetItNowButtonLabel)</button>
                                         </div>
                                     </div>
                                 </div>
@@ -208,128 +989,92 @@
                         <div role="tabpanel" class="tab-pane fade" id="yearly" aria-labelledby="yearly-tab" aria-expanded="false">
                             <div class="row">
                                 <div class="col-md">
+                                    @*YEARLY SILVER PLAN*@
                                     <div class="block block-pricing">
-                                        @*YEARLY SILVER*@
                                         <div class="table">
                                             <div class="row plan-header">
                                                 <div class="plan-header-holder">
                                                     <div class="display-block">
-                                                        <span class="plan-header-name">SILVER</span>
-                                                        <span class="plan-header-plan">PLAN</span>
-                                                        <div class="plan-header-value">Best starting value!</div>
+                                                        <span class="plan-header-name">@Html.Raw(ViewBag.YearlyPlan1)</span>
+                                                        <span class="plan-header-plan">@Html.Raw(ViewBag.YearlyPlanLabel)</span>
+                                                    </div>
+                                                    <div class="text-center mt10">
+                                                        <div class="display-inline">
+                                                            was @Html.Raw(ViewBag.CurrencySymbolLabel)<span class="discounted-plan-price">@Html.Raw(ViewBag.YearlyPlan1FullPriceLabel)</span>
+                                                            <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.YearlyPlan1SavePercentageLabel)%</span>
+                                                        </div>
+                                                        <div class="row clearfix"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h1 class="block-caption"><small>$</small>29.99</h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
+                                            <div class="display-block">
+                                                <h1 class="block-caption"><small>@Html.Raw(ViewBag.CurrencySymbolLabel)</small>@Html.Raw(ViewBag.YearlyPlan1CurrentPriceLabel)</h1>
+                                                <div class="per-month-label">@Html.Raw(ViewBag.YearlyPlan1CurrentTermLabel)</div>
+                                            </div>
+                                            <div class="text-center ptb15">
                                                 <div class="display-inline">
-                                                    * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                                                    <span class="color-red">*</span> @Html.Raw(ViewBag.YearlyPlan1RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.YearlyPlan1LowestRateLabel)%</span>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.YearlyPlan1)','event': 'Selected'});">@Html.Raw(ViewBag.SelectButtonLabel)</button>
                                             <div class="features-and-pricing-holder">
                                                 <div class="features-and-pricing-header">
-                                                    Available Features
+                                                    @Html.Raw(ViewBag.AvailableFeaturesLabel)
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li>Online Terminal</li>
-                                                <li>Mobile Application</li>
-                                                <li>Mobile Website</li>
-                                                <li>Touchtone Phone</li>
-                                                <li>Buy It Now Button</li>
-                                                <li>Donate Now Button</li>
-                                                <li>Stored Cards</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan1Feature1)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan1Feature2)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan1Feature3)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan1Feature4)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan1Feature5)</li>
+                                                <li><a href="#" data-toggle="modal" data-target="#SilverPlan">@Html.Raw(ViewBag.YearlyPlan1Feature6)</a> *</li>
                                             </ul>
-                                            <div class="rates-divider"></div>
-                                            <h1 class="block-caption-bottom"><small>$</small>29.99<small>per year</small></h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
-                                                <div class="display-inline">
-                                                    <div>
-                                                        was $<span class="discounted-plan-price">32.99</span>
-                                                        <span class="discounted-plan-percentage">Save 10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md">
+                                    @*YEARLY PLATINUM PLAN*@
                                     <div class="block block-pricing">
-                                        @*YEARLY GOLD*@
                                         <div class="table">
                                             <div class="row plan-header">
                                                 <div class="plan-header-holder">
                                                     <div class="display-block">
-                                                        <span class="plan-header-name">GOLD</span>
-                                                        <span class="plan-header-plan">PLAN</span>
-                                                        <div class="plan-header-value">Best starting value!</div>
+                                                        <span class="plan-header-name">@Html.Raw(ViewBag.YearlyPlan2)</span>
+                                                        <span class="plan-header-plan">@Html.Raw(ViewBag.YearlyPlanLabel)</span>
+                                                    </div>
+                                                    <div class="text-center mt10">
+                                                        <div class="display-inline">
+                                                            was @Html.Raw(ViewBag.CurrencySymbolLabel)<span class="discounted-plan-price">@Html.Raw(ViewBag.YearlyPlan2FullPriceLabel)</span>
+                                                            <span class="discounted-plan-percentage">@Html.Raw(ViewBag.MonthlyPlanSaveLabel) @Html.Raw(ViewBag.YearlyPlan2SavePercentageLabel)%</span>
+                                                        </div>
+                                                        <div class="row clearfix"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h1 class="block-caption"><small>$</small>34.99</h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
+                                            <div class="display-block">
+                                                <h1 class="block-caption"><small>@Html.Raw(ViewBag.CurrencySymbolLabel)</small>@Html.Raw(ViewBag.YearlyPlan2CurrentPriceLabel)</h1>
+                                                <div class="per-month-label">@Html.Raw(ViewBag.YearlyPlan2CurrentTermLabel)</div>
+                                            </div>
+                                            <div class="text-center ptb15">
                                                 <div class="display-inline">
-                                                    * rate as low as <span class="rates-as-low-as-percentage">2.29%</span>
+                                                    <span class="color-red">*</span> @Html.Raw(ViewBag.YearlyPlan2RateAsLowAsLabel) <span class="rates-as-low-as-percentage">@Html.Raw(ViewBag.YearlyPlan2LowestRateLabel)%</span>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round">Select</button>
+                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round" onclick="dataLayer.push({'Plan Choice': '@Html.Raw(ViewBag.YearlyPlan2)','event': 'Selected'});">@Html.Raw(ViewBag.SelectButtonLabel)</button>
                                             <div class="features-and-pricing-holder">
                                                 <div class="features-and-pricing-header">
-                                                    Available Features
+                                                    @Html.Raw(ViewBag.AvailableFeaturesLabel)
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li>Online Terminal</li>
-                                                <li>Mobile Application</li>
-                                                <li>Mobile Website</li>
-                                                <li>Touchtone Phone</li>
-                                                <li>Buy It Now Button</li>
-                                                <li>Donate Now Button</li>
-                                                <li>Stored Cards</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan2Feature1)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan2Feature2)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan2Feature3)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan2Feature4)</li>
+                                                <li>@Html.Raw(ViewBag.YearlyPlan2Feature5)</li>
+                                                <li><a href="#" data-toggle="modal" data-target="#SilverPlan">@Html.Raw(ViewBag.YearlyPlan2Feature6)</a> *</li>
                                             </ul>
-                                            <div class="rates-divider"></div>
-                                            <h1 class="block-caption-bottom"><small>$</small>34.99<small>per year</small></h1>
-                                            <div class="text-center pt15" style="padding-bottom: 15px;">
-                                                <div class="display-inline">
-                                                    <div>
-                                                        was $<span class="discounted-plan-price">38.49</span>
-                                                        <span class="discounted-plan-percentage">Save 10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="partner-btn custom-pricing-btn btn-round">Get It Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md" hidden>
-                                    <div class="block block-pricing">
-                                        <div class="table">
-                                            <h6 class="category">Corporate</h6>
-                                            <h1 class="block-caption"><small>$</small>79</h1>
-                                            <ul>
-                                                <li><b>4 GB</b> Ram</li>
-                                                <li><b>7/24</b> Tech Support</li>
-                                                <li><b>40 GB</b> SSD Cloud Storage</li>
-                                                <li>Monthly Backups</li>
-                                                <li>Palo Protection</li>
-                                            </ul> <a href="#" class="partner-btn btn-primary btn-round">Sign Up</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md" hidden>
-                                    <div class="block block-pricing">
-                                        <div class="table">
-                                            <h6 class="category">Professional</h6>
-                                            <h1 class="block-caption"><small>$</small>99</h1>
-                                            <ul>
-                                                <li><b>4 GB</b> Ram</li>
-                                                <li><b>7/24</b> Tech Support</li>
-                                                <li><b>40 GB</b> SSD Cloud Storage</li>
-                                                <li>Monthly Backups</li>
-                                                <li>Palo Protection</li>
-                                            </ul> <a href="#" class="partner-btn btn-primary btn-round">Sign Up</a>
                                         </div>
                                     </div>
                                 </div>
