@@ -17,7 +17,7 @@
 */
 /*  ********************** /STYLES ARCHITECTURE/ **********************  */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css") all;
-@import url("https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Droid+Sans:400,900") all;
+@import url("https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:300,400,500|Droid+Sans:300,400,500,600") all;
 .white {
   color: #fff; }
 
@@ -158,6 +158,9 @@
 
 .pr5 {
   padding-right: 5px; }
+
+.pr8 {
+  padding-right: 8px; }
 
 .pr10 {
   padding-right: 10px; }
@@ -452,10 +455,19 @@ mp0 {
 .f30 {
   font-size: 30px; }
 
+.fw3 {
+  font-weight: 300; }
+
+.fw4 {
+  font-weight: 400; }
+
+.fw6 {
+  font-weight: 600; }
+
 /*FONT AWESOME CDN*/
 /*RALEWAY AND DROID FONT API*/
 body {
-  font-family: "Droid Sans", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   color: #46484a;
   font-size: 17px; }
@@ -490,7 +502,7 @@ hr.divider {
   border-top: solid 1px #EEE; }
 
 a.navbar-brand, a.logo {
-  font-family: "Droid Sans", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #fff !important;
   font-size: 2rem;
   font-weight: 500;
@@ -614,18 +626,21 @@ a.logo:focus {
   .content .full-width {
     width: 100%; }
 
-.features-header {
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
+h4.features-subheader {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 22px;
   text-align: center;
-  padding-bottom: 25px; }
+  font-weight: 300;
+  padding: 8px 0 15px 0; }
 
 .features-description {
-  font-size: 14px;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300 !important;
   text-align: center; }
+
+h4.features-tagline {
+  min-height: 45px; }
 
 #feaures-and-pricing-selector {
   margin: 30px 15% 25px; }
@@ -812,4 +827,42 @@ div .card-brand-rates {
 .nav-pills:not(.nav-pills-icons) > li > a {
   border-radius: 30px;
   font-weight: 400; }
+
+section#disabled-cookies {
+  background-color: #ff5061;
+  height: 85px;
+  border-bottom: solid 3px #FF0000;
+  font-size: 17px; }
+
+@media all and (max-width: 991px) and (min-width: 768px) {
+  section#disabled-cookies {
+    background-color: #ff5061;
+    height: 75px;
+    border-bottom: solid 3px #FF0000;
+    font-size: 15px; } }
+
+@media all and (max-width: 767px) and (min-width: 421px) {
+  section#disabled-cookies {
+    background-color: #ff5061;
+    height: 85px;
+    border-bottom: solid 3px #FF0000;
+    font-size: 14px; } }
+
+@media all and (max-width: 420px) {
+  section#disabled-cookies {
+    background-color: #ff5061;
+    height: 115px;
+    border-bottom: solid 3px #FF0000;
+    font-size: 13px; } }
+
+#footer {
+  min-height: 3rem;
+  width: 100%;
+  /*color: rgba(255,255,255,0,6);*/
+  padding: 15px 0; }
+
+.footer-copyright {
+  font-size: 12px;
+  margin: 10px 8px;
+  font-family: "Droid Sans", sans-serif; }
 

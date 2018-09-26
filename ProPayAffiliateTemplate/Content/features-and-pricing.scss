@@ -258,6 +258,8 @@ $sevenhundred: 700;
     padding-right: $fivepx;
 }
 
+.pr8{padding-right: $eightpx;}
+
 .pr10 {
     padding-right: $tenpx;
 }
@@ -639,16 +641,21 @@ mp0 {
     font-size: $thirtypx;
 }
 
+.fw3{font-weight:300;}
+.fw4{font-weight:400;}
+.fw6{font-weight:600;}
+
 // 5- CUSTOM IMPORTED FONTS CDN AND API URLS ******************************************** /
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css") all; /*FONT AWESOME CDN*/
-@import url('https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Droid+Sans:400,900') all; /*RALEWAY AND DROID FONT API*/
+@import url('https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:300,400,500|Droid+Sans:300,400,500,600') all; /*RALEWAY AND DROID FONT API*/
 
 // 6- CUSTOM FONT DEFINITIONS ******************************************** /
 $font_0: 'Raleway';
-$font_1: 'Droid Sans';
+$font_1: 'Roboto';
 $font_2: sans-serif;
 $font_3: Times New Roman;
 $font_4: Arial;
+$font_5: 'Droid Sans';
 
 body {
     font-family: $font_1, $font_4, $font_2;
@@ -890,19 +897,23 @@ a.logo {
     }
 }
 
-.features-header {
-    font-size: 18px;
-    font-family: $font_0, $font_2;
-    color: $white;
+h4.features-subheader {
+    font-family: $font_1, $font_2 !important;
+    font-size: 22px;
     text-align: center;
-    padding-bottom: 25px;
+    font-weight: 300;
+    padding: 8px 0 15px 0;
 }
 
 .features-description {
-    font-size: 14px;
-    font-family: $font_0, $font_2;
-    color: $white;
+    font-family: $font_1, $font_2;
+    font-size: 17px;
+    font-weight: 300 !important;
     text-align: center;
+}
+
+h4.features-tagline {
+    min-height: 45px;
 }
 
 #feaures-and-pricing-selector {
@@ -1170,3 +1181,48 @@ div {
     border-radius: 30px;
     font-weight: 400;
 }
+
+section#disabled-cookies {
+    background-color: #ff5061;
+    height: 85px;
+    border-bottom: solid 3px #FF0000;
+    font-size:17px;
+}
+
+@media all and (max-width:991px) and (min-width:768px) {
+    section#disabled-cookies {
+        background-color: #ff5061;
+        height: 75px;
+        border-bottom: solid 3px #FF0000;
+        font-size:15px;
+    }
+}
+@media all and (max-width:767px) and (min-width:421px) {
+    section#disabled-cookies {
+        background-color: #ff5061;
+        height: 85px;
+        border-bottom: solid 3px #FF0000;
+        font-size:14px;
+    }
+}
+@media all and (max-width:420px) {
+    section#disabled-cookies {
+        background-color: #ff5061;
+        height: 115px;
+        border-bottom: solid 3px #FF0000;
+        font-size: 13px;
+    }
+}
+
+    #footer {
+        min-height: 3rem;
+        width: 100%;
+        /*color: rgba(255,255,255,0,6);*/
+        padding: 15px 0;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        margin: 10px 8px;
+        font-family: $font_5,$font_2;
+    }

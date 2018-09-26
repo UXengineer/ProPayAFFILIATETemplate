@@ -1,27 +1,74 @@
 ﻿<!DOCTYPE html>
 @{
+    // ***** STEP 1 : PICK THE THEME *****
     ViewBag.PartnerTheme = "Default";
     //ViewBag.PartnerTheme = "MaryKay";
     //ViewBag.PartnerTheme = "ThirtyOne";
+    //ViewBag.PartnerTheme = "iMobile3";
     ViewBag.PageTitle = "Small Business Merchant Account Features &amp; Pricing";
     ViewBag.PageDescription = "Accept Credit cards anytime, anywhere, in-person, online, mobile.  Payment solutions for Small Businesses. Low rates, free support. Sign up in 5 minutes. Compare to Square &amp; PayPal.";
-    ViewBag.PartnerName = "Mary Kay";
+
+    // ***** STEP 2 : PICK THE PARTNER'S NAME *****
+    ViewBag.PartnerName = "ProPay";
+    //ViewBag.PartnerName = "Mary Kay";
+    //ViewBag.PartnerName = "31Gifts";
+    //ViewBag.PartnerName = "iMobile3";
 
     ViewBag.PartnerGoogleTagManagerID = "GTM-MZ8MRT";  // This is the Partner's Google Tag Manager associated with the custom URL and Tag Manager View
     ViewBag.GoogleUniversalID = "UA-12739219-14"; // Use the Google Universal ID for Partners using legacy Google analytics
     ViewBag.PartnerBingValidationID = "90F39A1349E577CF8C33173B061B6A01"; // Bing Ownership Verification tag associated with the URL.
 
-    //CUSTOM Colors
-    ViewBag.MainThemeColor = "#0080a6"; //Default ProPay Blue
-    //ViewBag.MainThemeColor = "#9fc163"; //Default ProPay Green
-    //ViewBag.MainThemeColor = "#ef477e"; //MaryKay Pink
-    //ViewBag.MainThemeColor = "#e01580"; //31Giftys
+
+    // ***** STEP 3 : MATCH THE PARTNER THEME, NAME AND CUSTOM COLORS *****
+    //PROPAY Theme
+    ViewBag.MainThemeColor = "#0080a6";           //Default ProPay Blue
+    ViewBag.ButtonBackgroundColor = "#0080a6";    //Default
+    ViewBag.ButtonBorderColor = "#0080a6";          //Default Button Border Color
+    ViewBag.FeaturesBackgroundColor = "#0080a6";    //Default Features Section Background Color
+    ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
+    ViewBag.DisabledCookiesWarning = "";      //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
+    ViewBag.HeroTaglineLabel = "Special merchant accounts for MaryKay consultants";   //HERO TAGLINE
     ViewBag.ButtonTextColor = "#FFFFFF";  // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
-    ViewBag.ButtonRadius = "0";  // This Radius changes the round border for buttons found over the the HERO image.
+    ViewBag.ButtonRadius = "12";  // This Radius changes the round border for buttons found over the the HERO image.
+    ViewBag.FooterBackgroundColor = "#0080a6";  //This is the Footer Background Color
+    ViewBag.FooterTextColor = "#FFFFFF";  //This is the text color located in the footer
+
+    //MARYKAY Theme
+    //ViewBag.MainThemeColor = "#ef477e";             //MaryKay
+    //ViewBag.ButtonBackgroundColor = "#ef136e";      //MaryKay
+    //ViewBag.ButtonBorderColor = "#ef136e";          //MaryKay Button Border Color
+    //ViewBag.FeaturesBackgroundColor = "#ef477e";    //MaryKay Features Section Background Color
+    //ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
+    //ViewBag.DisabledCookiesWarning = "hidden";      //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
+    //ViewBag.HeroTaglineLabel = "Special merchant accounts for MaryKay consultants";   //HERO TAGLINE
+    //ViewBag.ButtonTextColor = "#FFFFFF";            // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
+    //ViewBag.ButtonRadius = "12";                    // This Radius changes the round border for buttons found over the the HERO image.
+    //ViewBag.FooterBackgroundColor = "#ef477e";      //This is the Footer Background Color
+    //ViewBag.FooterTextColor = "#FFFFFF";            //This is the text color located in the footer
+
+    //31Gifts
+    //ViewBag.MainThemeColor = "#e01580";             //31Gifts
+    //ViewBag.ButtonBackgroundColor = "#e01580";      //31Gifts
+    //ViewBag.ButtonBorderColor = "#e01580";          //31Gifts Button Border Color
+    //ViewBag.FeaturesBackgroundColor = "#e01580";    //MaryKay Features Section Background Color
+    //ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
+
+    //iMobile3 Theme
+    //ViewBag.MainThemeColor = "#000099";             //iMobile3
+    //ViewBag.ButtonBackgroundColor = "#000099";      //Button Background Color
+    //ViewBag.ButtonBorderColor = "#000099";          //Button Border Color
+    //ViewBag.FeaturesBackgroundColor = "#000099";    //Features Section Background Color
+    //ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
+    //ViewBag.DisabledCookiesWarning = "hidden";      //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
+    //ViewBag.HeroTaglineLabel = "Special merchant accounts for iMobile3 consultants";   //HERO TAGLINE
+    //ViewBag.ButtonTextColor = "#FFFFFF";            // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
+    //ViewBag.ButtonRadius = "7";                     // This Radius changes the round border for buttons found over the the HERO image.
+    //ViewBag.FooterBackgroundColor = "#303030";      //This is the Footer Background Color
+    //ViewBag.FooterTextColor = "#c8c8c8";            //This is the text color located in the footer
+
 
     //Hero Banner
     ViewBag.SignUpButtonLabel = "Sign Up";
-    ViewBag.HeroTaglineLabel = "Special merchant accounts for Mary Kay consultants";
     ViewBag.LoginButtonLabel = "LOGIN";
 
     //Social Media Channels
@@ -41,6 +88,10 @@
     <title>@ViewBag.PageTitle</title>
     <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <style type="text/css">
+        #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
+        #features-container {background: @Html.Raw(ViewBag.FeaturesBackgroundColor) !important;border-top: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);border-bottom: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);}
+        .features-header, .features-subheader, .features-tagline, .features-description {color:@Html.Raw(ViewBag.FeaturesTextColor);}
+
         .nav-tabs {margin-bottom: 30px;}
         .nav-tabs .nav-link.active {background-color:@Html.Raw(ViewBag.MainThemeColor);color:@Html.Raw(ViewBag.ButtonTextColor);box-shadow: 0 16px 26px -10px #999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;border-radius: 20px;font-weight: 600;}
 
@@ -63,9 +114,11 @@
         .partner-btn.custom-pricing-btn:active {box-shadow: 0 14px 26px -12px #999, 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;}
         .partner-btn.custom-pricing-btn:hover {box-shadow: 0 14px 26px -12px #999, 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;}
 
-        .partner-cover-btn {border: none;border-radius: 3px;position: relative;padding: 12px 45px;margin: 10px 1px;font-size: 12px;font-weight: 400;text-transform: uppercase;
-                            text-decoration: none;letter-spacing: 0;will-change: box-shadow, transform; }
-        .partner-cover-btn.cover-btn-round {border-radius:@Html.Raw(ViewBag.ButtonRadius)px; }
+        .partner-cover-btn {border: solid 2px @Html.Raw(ViewBag.ButtonBorderColor);background-color:@Html.Raw(ViewBag.ButtonBackgroundColor);color: @Html.Raw(ViewBag.ButtonTextColor);
+                            border-radius:@Html.Raw(ViewBag.ButtonRadius)px;padding: 12px 45px;margin: 10px 1px;font-weight: 400;text-transform: uppercase;
+                            font-size:1em;text-decoration:none!important;position: relative;letter-spacing: 0;will-change: box-shadow, transform;
+                           }
+        .partner-cover-btn:hover{color: @Html.Raw(ViewBag.ButtonTextColor);}
 
         .features-and-pricing-holder {background-color:@Html.Raw(ViewBag.MainThemeColor);height: 30px;text-align: left;margin: 15px -15px;}
         .features-and-pricing-header {color:@Html.Raw(ViewBag.ButtonTextColor);padding: 5px 0 0 25px;font-weight: 600;font-size: 14px;letter-spacing: 0.1em;text-transform: uppercase;}
@@ -74,10 +127,10 @@
         a {color:@Html.Raw(ViewBag.MainThemeColor);text-decoration: none;}
         a:hover {color:@Html.Raw(ViewBag.MainThemeColor);text-decoration: underline;}
 
-        .footer {background:@Html.Raw(ViewBag.MainThemeColor);min-height: 3rem;width: 100%;color: rgba(255, 255, 255, 0.6);padding-top: 15px;padding-bottom: 15px;}
-        .footer p {font-size: 12px;color: rgba(255, 255, 255, 0.6);margin: 10px 8px;}
-        .footer .nav-footer .nav-link {@Html.Raw(ViewBag.ButtonTextColor);}
-        .footer .nav-footer .nav-link:hover {color: rgba(255, 255, 255, 0.9); }
+        #footer {background:@Html.Raw(ViewBag.FooterBackgroundColor);background-color:@Html.Raw(ViewBag.FooterBackgroundColor);}
+        #footer p.footer-copyright {color: @Html.Raw(ViewBag.FooterTextColor);}
+        #footer .nav-footer .nav-link {@Html.Raw(ViewBag.ButtonTextColor);}
+        #footer .nav-footer .nav-link:hover {color: rgba(255, 255, 255, 0.9); }
     </style>
     <link href="~/Content/features-and-pricing.css" rel="stylesheet" />
     @{
@@ -89,18 +142,23 @@
     @{
         Html.RenderPartial("_AnalyticsGoogleTagManagerConfirmation");
     }
-    <section style="background: #3d354f url('../../App_Themes/@ViewBag.PartnerTheme/img/hero.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;">
+    <section id="disabled-cookies" class="container-fluid" @Html.Raw(ViewBag.DisabledCookiesWarning)>
+        <div class="pt20 white text-center">
+            <i class="fa fa-warning pr5"></i><span class="fw6 pr8">COOKIES REQUIRED!</span> This website requires cookies to be enabled! You must enable your browser cookies to be access the features built-in before signing up for a new account!
+        </div>
+    </section>
+    <section id="hero-container">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container">
-                <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@ViewBag.PartnerTheme/img/logo-nav.png" /></a>
+                <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo-nav.png" /></a>
                 <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse pull-xs-right justify-content-end" id="navbar-4">
                     <ul class="social navbar-nav mt-2 mt-md-0">
                         @{
                             Html.RenderPartial("_SocialMediaChannels");
                         }
-                        <div class="clear"></div>
                     </ul>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </nav>
@@ -109,72 +167,69 @@
                 <div class="col-md-5"></div>
                 <div class="col-md-6">
                     <div class="cover-inner">
-                        <div class="display-block pb30"><img src="~/App_Themes/@ViewBag.PartnerTheme/img/logo.png" class="img-fluid" /></div>
-                        <div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn cover-btn-round" style="color: @Html.Raw(ViewBag.ButtonTextColor);background-color:@Html.Raw(ViewBag.MainThemeColor);border-color:@Html.Raw(ViewBag.MainThemeColor);font-size:1em;text-decoration:none;" title="Easy account sign up. Start Now!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.SignUpButtonLabel'});">@Html.Raw(ViewBag.SignUpButtonLabel)</a></div>
-
-                        @*<div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn custom-pricing-cover-btn cover-btn-round" title="Easy account sign up. Start Now!">@Html.Raw(ViewBag.SignUpButtonLabel)</a></div>*@
+                        <div class="display-block pb30"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo.png" class="img-fluid" /></div>
+                        <div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn" title="Easy account sign up. Start Now!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.SignUpButtonLabel'});">@Html.Raw(ViewBag.SignUpButtonLabel)</a></div>
                         <div class="pb10 mb20"></div>
                         <h1 class="jumbotron-heading text-shadow">Special merchant accounts for Mary Kay consultants</h1>
                         <div class="pb30"></div>
                         <p class="lead" hidden>Be the first to know when we are ready to launch. Etiam porta sem malesuada magna mollis euismod. Sed mollis neque at aliquam rhoncus, consectetur adipiscing elit.</p>
-                        <div class="pt30"><a href="#" id="LoginLink" class="partner-cover-btn cover-btn-round" style="color: @Html.Raw(ViewBag.ButtonTextColor);background-color:@Html.Raw(ViewBag.MainThemeColor);border-color:@Html.Raw(ViewBag.MainThemeColor);font-size:1em;text-decoration:none;" title="Login to your account!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.LoginButtonLabel'});">@Html.Raw(ViewBag.LoginButtonLabel)</a></div>
+                        <div class="pt30"><a href="#" id="LoginLink" class="partner-cover-btn" title="Login to your account!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.LoginButtonLabel'});">@Html.Raw(ViewBag.LoginButtonLabel)</a></div>
                         <div class="pb10 mb10"></div>
                     </div>
                 </div><div class="col-md-1"></div>
             </div>
         </div>
     </section>
-    @*<section class="content alt-background">*@ @*ORIGINAL <section> TAG*@
     @*  ******************* VALUE COLUMNS *******************  *@
-    <section class="content" style="background: @Html.Raw(ViewBag.MainThemeColor) !important;border-top: 1px solid @Html.Raw(ViewBag.MainThemeColor);border-bottom: 1px solid @Html.Raw(ViewBag.MainThemeColor);">
+    <section id="features-container" class="content">
         <div class="container">
             <div class="row justify-center">
                 <div class="col-md-12 text-center mr-auto">
-                    <h2 class="white">Accept Credit Cards and Debit Cards for your business</h2>
-                    <p class="mb-3 white">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</p>
+                    <h2 class="features-header">Accept Credit Cards and Debit Cards for your business</h2>
+                    <h4 class="features-subheader">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</h4>
                 </div>
                 <div class="col-md-12 text-center mr-auto">
                     <div class="row">
                         <div class="col">
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-1.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-1.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">Mary Kay Prepaid Debit MasterCard<sup>®</sup></h4>
+                            <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) Debit MasterCard<sup>®</sup></h4>
                             <p class="features-description">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</p>
                         </div>
                         <div class="col">
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-2.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-2.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">No need to transfer funds around</h4>
+                            <h4 class="features-tagline">No need to transfer funds around</h4>
                             <p class="features-description">Spend funds from your commissions and sales directly from your ProPay ccount to buy more product from Mary Kay corporate.</p>
                         </div>
                         <div class="col">
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-3.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-3.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">Mary Kay branded card reader</h4>
+                            <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) branded card reader</h4>
                             <p class="features-description">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</p>
                         </div>
                         <div class="col">
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-4.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-4.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">Integration to your Mary Kay personal website</h4>
+                            <h4 class="features-tagline">Integration to your @Html.Raw(ViewBag.PartnerName) personal website</h4>
                             <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept paymetns any time online.</p>
                         </div>
                         <div class="col" hidden>
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-5.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-5.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">Additional product header in this space</h4>
+                            <h4 class="features-tagline">Additional product header in this space</h4>
                             <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
                         </div>
                         <div class="col" hidden>
                             <div class="display-block">
-                                <img src="~/App_Themes/Default/img/feature-6.png" class="img-fluid" />
+                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-6.png" class="img-fluid" />
                             </div>
-                            <h4 class="features-header">Additional product header in this space</h4>
+                            <h4 class="features-tagline">Additional product header in this space</h4>
                             <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
                         </div>
                     </div>
@@ -183,24 +238,22 @@
         </div>
     </section>
     @*./******************* VALUE COLUMNS *******************/.*@
-
-
+    
     @RenderBody()
 
-
-    <footer style="background-color:@Html.Raw(ViewBag.MainThemeColor);background:@Html.Raw(ViewBag.MainThemeColor);min-height: 3rem;width: 100%; color: rgba(255,255,255,0,6);padding: 15px 0;">
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-8 text-center text-md-left text-sm-left">
-                    <p style="font-size: 12px;color: rgba(255, 255, 255, 0.6);margin: 10px 8px;font-family:Droid,Sans-serif;">@Html.Raw(ViewBag.Copyright)</p>
+                    <p class="footer-copyright">@Html.Raw(ViewBag.Copyright)</p>
                 </div>
                 <div class="col-sm-12 col-md-4 text-center text-md-center mb-4">
                     <ul class="social">
                         @{
-                            Html.RenderPartial("_SocialMediaChannels");
+                        Html.RenderPartial("_SocialMediaChannels");
                         }
-                        <div class="clear"></div>
                     </ul>
+                    <div class="clear"></div>
                 </div>
             </div>
         </div>

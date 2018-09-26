@@ -159,6 +159,15 @@
     <Content Include="App_Themes\Default\img\features-bg.jpg" />
     <Content Include="App_Themes\Default\img\logo-nav.png" />
     <Content Include="App_Themes\Default\img\logo.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-1.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-2.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-3.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-4.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-5.png" />
+    <Content Include="App_Themes\iMobile3\img\feature-6.png" />
+    <Content Include="App_Themes\iMobile3\img\hero.jpg" />
+    <Content Include="App_Themes\iMobile3\img\logo-nav.png" />
+    <Content Include="App_Themes\iMobile3\img\logo.png" />
     <Content Include="App_Themes\MaryKay\img\hero.jpg" />
     <Content Include="App_Themes\MaryKay\img\feature-1.png" />
     <Content Include="App_Themes\MaryKay\img\feature-2.png" />
@@ -211,6 +220,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\iMobile3\img\logo-nav.psd" />
+    <Content Include="App_Themes\iMobile3\img\logo.psd" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
