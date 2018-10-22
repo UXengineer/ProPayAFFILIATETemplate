@@ -17,7 +17,6 @@
 */
 /*  ********************** /STYLES ARCHITECTURE/ **********************  */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css") all;
-@import url("https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:300,400,500|Droid+Sans:300,400,500,600") all;
 .white {
   color: #fff; }
 
@@ -465,16 +464,10 @@ mp0 {
   font-weight: 600; }
 
 /*FONT AWESOME CDN*/
-/*RALEWAY AND DROID FONT API*/
-body {
-  font-family: "Roboto", Arial, sans-serif;
-  font-weight: 400;
-  color: #46484a;
-  font-size: 17px; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", Arial, sans-serif; }
-
+/*$font_0: 'Raleway';
+$font_1: 'Roboto';*/
+/*body {font-family: $font_1, $font_4, $font_2;font-weight: 400;color: $body_color;font-size: $seventheenpx;}
+h1, h2, h3, h4, h5, h6 {font-family: $font_0, $font_4, $font_2;}*/
 h1 {
   font-size: 32px;
   font-weight: 400; }
@@ -501,16 +494,19 @@ hr.divider {
   border: 0;
   border-top: solid 1px #EEE; }
 
-a.navbar-brand, a.logo {
-  font-family: "Roboto", Arial, sans-serif;
-  color: #fff !important;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-top: 0; }
-
+/*%extend_1 {font-family: $font_1, $font_4, $font_2;color: $white !important;font-size: 2rem;font-weight: 500;margin-top: 0;}*/
 .navbar-custom {
   background: transparent; }
 
+/*a {
+    &.navbar-brand {
+        @extend %extend_1;
+    }
+
+    &.logo {
+        @extend %extend_1;
+    }
+}*/
 .navbar-toggler-social {
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -618,6 +614,14 @@ a.logo:focus {
     margin: 0 auto;
     display: inline-block; } }
 
+@media (max-width: 420px) {
+  ul.social {
+    border: dotted 1px white;
+    text-align: center !important;
+    padding: 0px;
+    margin: 0px;
+    width: auto; } }
+
 .content {
   background: #fff;
   padding-bottom: 0.1rem; }
@@ -626,19 +630,20 @@ a.logo:focus {
   .content .full-width {
     width: 100%; }
 
-h4.features-subheader {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 22px;
-  text-align: center;
-  font-weight: 300;
-  padding: 8px 0 15px 0; }
+/*h4.features-subheader {
+    font-family: $font_1, $font_2 !important;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+    padding: 8px 0 15px 0;
+}
 
 .features-description {
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  font-weight: 300 !important;
-  text-align: center; }
-
+    font-family: $font_1, $font_2;
+    font-size: 17px;
+    font-weight: 300 !important;
+    text-align: center;
+}*/
 h4.features-tagline {
   min-height: 45px; }
 
@@ -676,7 +681,7 @@ h4.features-tagline {
 
 .plan-header-plan {
   display: inline;
-  font-size: 2.0em;
+  font-size: 26px;
   font-weight: 400;
   color: #777; }
 
@@ -750,14 +755,14 @@ div .card-brand-rates {
   text-align: center; }
   .block-pricing .block-caption {
     margin-top: 10px;
-    font-size: 4.5em;
+    font-size: 70px;
     margin-bottom: 0; }
   .block-pricing .per-month-label {
     color: #777;
     margin: -5px 0 0 5px; }
   .block-pricing .block-caption-bottom {
     margin: 5px auto 0 auto;
-    font-size: 4.2em; }
+    font-size: 65px; }
   .block-pricing .table {
     padding: 15px !important;
     margin-bottom: 0; }
@@ -848,12 +853,22 @@ section#disabled-cookies {
     border-bottom: solid 3px #FF0000;
     font-size: 14px; } }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto; } }
+
 @media all and (max-width: 420px) {
   section#disabled-cookies {
     background-color: #ff5061;
     height: 115px;
     border-bottom: solid 3px #FF0000;
-    font-size: 13px; } }
+    font-size: 13px; }
+  .text-xs-center {
+    text-align: center !important; } }
 
 #footer {
   min-height: 3rem;
@@ -865,4 +880,3 @@ section#disabled-cookies {
   font-size: 12px;
   margin: 10px 8px;
   font-family: "Droid Sans", sans-serif; }
-

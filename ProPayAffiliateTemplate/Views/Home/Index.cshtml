@@ -189,6 +189,48 @@
     ViewBag.MonthlyPlan3Limit1PerMonthLabel = "Monthly Limit";
     ViewBag.MonthlyPlan3Limit1PerMonthAmountLabel = "3,000.00";
 
+
+    //PLATINUM MODAL CUSTOM VALUES
+    ViewBag.MonthlyPlan4Card1Label = "Visa";
+    ViewBag.MonthlyPlan4Card1PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan4Card1RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan4Card2Label = "MasterCard";
+    ViewBag.MonthlyPlan4Card2PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan4Card2RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan4Card3Label = "Discover";
+    ViewBag.MonthlyPlan4Card3PercentageLabel = "1.99";
+    ViewBag.MonthlyPlan4Card3RateCostLabel = "0.00";
+    ViewBag.MonthlyPlan4Card4Label = "American Express";
+    ViewBag.MonthlyPlan4Card4PercentageLabel = "3.39";
+    ViewBag.MonthlyPlan4Card4RateCostLabel = "0.00";
+
+    ViewBag.MonthlyPlan4StandardRateCard1Label = "Visa";
+    ViewBag.MonthlyPlan4StandardRate1PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan4StandardRate1CostLabel = "0.00";
+    ViewBag.MonthlyPlan4StandardRateCard2Label = "MasterCard";
+    ViewBag.MonthlyPlan4StandardRate2PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan4StandardRate2CostLabel = "0.00";
+    ViewBag.MonthlyPlan4StandardRateCard3Label = "Discover";
+    ViewBag.MonthlyPlan4StandardRate3PercentageLabel = "3.55";
+    ViewBag.MonthlyPlan4StandardRate3CostLabel = "0.00";
+    ViewBag.MonthlyPlan4StandardRateCard4Label = "American Express";
+    ViewBag.MonthlyPlan4StandardRate4PercentageLabel = "3.40";
+    ViewBag.MonthlyPlan4StandardRate4CostLabel = "0.00";
+
+    ViewBag.MonthlyPlan4BankTransferFeeLabel = "Bank Transfer Fee";
+    ViewBag.MonthlyPlan4BankTransferFeeCostLabel = "0.10";
+    ViewBag.MonthlyPlan4AccountRenewalFeeLabel = "Account Renewal Fee";
+    ViewBag.MonthlyPlan4AccountRenewalFeeCostLabel = "29.95";
+    ViewBag.MonthlyPlan4ATMFeeLabel = "ATM Fee";
+    ViewBag.MonthlyPlan4ATMFeeCostLabel = "2.50";
+    ViewBag.MonthlyPlan4PPMCFeeLabel = "PPMC ATM Fee";
+    ViewBag.MonthlyPlan4PPMCFeeCostLabel = "2.50";
+
+    ViewBag.MonthlyPlan4Limit1PerTransactionLabel = "Per Transaction Limit";
+    ViewBag.MonthlyPlan4Limit1AmountLabel = "500.00";
+    ViewBag.MonthlyPlan4Limit1PerMonthLabel = "Monthly Limit";
+    ViewBag.MonthlyPlan4Limit1PerMonthAmountLabel = "3,000.00";
+
     //YEARLY SILVER PLAN
     ViewBag.YearlyPlan1 = "SILVER";
     ViewBag.YearlyPlan1RateAsLowAsLabel = "rate as low as";
@@ -834,23 +876,35 @@
     <div class="section-gray">
         <div class="container">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 text-center">
+                <div class="col-sm-1 col-md-3"></div>
+                <div class="col-xs-12 col-sm-10 col-md-6 text-center">
                     <ul id="feaures-and-pricing-selector" class="nav nav-tabs" role="tablist">
                         <li class="nav-item"><a class="nav-link active" href="#monthly" id="monthly-tab" role="tab" data-toggle="tab" aria-controls="monthly" aria-expanded="true"><i class="fa fa-usd"></i> MONTHLY</a> </li>
                         <li class="nav-item"><a class="nav-link" href="#yearly" role="tab" id="yearly-tab" data-toggle="tab" aria-controls="yearly" aria-expanded="false"><i class="fa fa-usd"></i> YEARLY</a> </li>
                     </ul>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-sm-1 col-md-3"></div>
             </div>
             <div class="row">
                 <div class="container-fluid">
                     <!-- Content Panel -->
                     <div id="features-and-pricing" class="tab-content">
                         <div role="tabpanel" class="tab-pane fade active show" id="monthly" aria-labelledby="monthly-tab" aria-expanded="true">
+
+
+                            <div class="row" hidden>
+                                <div class="col-sm">left</div>
+                                <div class="col-sm">center</div>
+                                <div class="col-sm">right</div>
+                                <div class="clearfix"></div>
+                                <div class="col-xs-4 col-sm-4" style="border: dotted 1px red;">col 1</div>
+                                <div class="col-xs-4 col-sm-4" style="border: dotted 1px green;">col 2</div>
+                                <div class="col-xs-4 col-sm-4" style="border: dotted 1px blue;">col 3</div>
+                            </div>
+
                             <div class="row">
-                                <div class="col-sm">
-                                    @*SILVER PLAN*@
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    @*MONTHLY SILVER PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
                                             <div class="row plan-header">
@@ -894,8 +948,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm">
-                                    @*YEARLY SILVER PLAN*@
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                                    @*MONTHLY GOLD SILVER PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
                                             <div class="row plan-header">
@@ -939,8 +993,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm">
-                                    @*YEARLY PLATINUM PLAN*@
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    @*MONTHLY PLATINUM PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
                                             <div class="row plan-header">
@@ -988,7 +1042,7 @@
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="yearly" aria-labelledby="yearly-tab" aria-expanded="false">
                             <div class="row">
-                                <div class="col-md">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     @*YEARLY SILVER PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">
@@ -1033,7 +1087,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     @*YEARLY PLATINUM PLAN*@
                                     <div class="block block-pricing">
                                         <div class="table">

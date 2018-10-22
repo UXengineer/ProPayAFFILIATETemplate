@@ -21,17 +21,19 @@
 
     // ***** STEP 3 : MATCH THE PARTNER THEME, NAME AND CUSTOM COLORS *****
     //PROPAY Theme
-    ViewBag.MainThemeColor = "#0080a6";           //Default ProPay Blue
-    ViewBag.ButtonBackgroundColor = "#0080a6";    //Default
+    ViewBag.FontFamilyOne = "'Raleway'";            //CUSTOM FONT 1 - SETUP USES THE GOOGLE FONTS IMPORT METHOD
+    ViewBag.FontFamilyTwo = "'Roboto'";             //CUSTOM FONT 2 - SETUP ALSO USES THE GOOGLE FONTS IMPORT METHOD
+    ViewBag.MainThemeColor = "#0080a6";             //Default ProPay Blue
+    ViewBag.ButtonBackgroundColor = "#0080a6";      //Default
     ViewBag.ButtonBorderColor = "#0080a6";          //Default Button Border Color
     ViewBag.FeaturesBackgroundColor = "#0080a6";    //Default Features Section Background Color
     ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
-    ViewBag.DisabledCookiesWarning = "";      //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
+    ViewBag.DisabledCookiesWarning = "";            //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
     ViewBag.HeroTaglineLabel = "Special merchant accounts for MaryKay consultants";   //HERO TAGLINE
-    ViewBag.ButtonTextColor = "#FFFFFF";  // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
-    ViewBag.ButtonRadius = "12";  // This Radius changes the round border for buttons found over the the HERO image.
-    ViewBag.FooterBackgroundColor = "#0080a6";  //This is the Footer Background Color
-    ViewBag.FooterTextColor = "#FFFFFF";  //This is the text color located in the footer
+    ViewBag.ButtonTextColor = "#FFFFFF";            // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
+    ViewBag.ButtonRadius = "12";                    // This Radius changes the round border for buttons found over the the HERO image.
+    ViewBag.FooterBackgroundColor = "#0080a6";      //This is the Footer Background Color
+    ViewBag.FooterTextColor = "#FFFFFF";            //This is the text color located in the footer
 
     //MARYKAY Theme
     //ViewBag.MainThemeColor = "#ef477e";             //MaryKay
@@ -72,11 +74,11 @@
     ViewBag.LoginButtonLabel = "LOGIN";
 
     //Social Media Channels
-    ViewBag.Facebook = "FacebookChannel";
-    ViewBag.Twitter = "Twitter";
-    ViewBag.YouTube = "YouTube";
-    ViewBag.LinkedIn = "LinkedIn";
-    ViewBag.Instagram = "Instagram";
+    ViewBag.Facebook = "FacebookChannel";   //PARTNER's Facebook Channel
+    ViewBag.Twitter = "Twitter";            //PARTNER's Twitter Handle
+    ViewBag.YouTube = "YouTube";            //PARTNER's YouTube Channel
+    ViewBag.LinkedIn = "LinkedIn";          //PARTNER's LinkedIn Username
+    ViewBag.Instagram = "Instagram";        //PARTNER's Instagram Account
 
     //Footer
     ViewBag.Copyright = "2018 © ProPay Inc. All Rights Reserved. | ProPay Inc. 3400 N. Ashton Blvd, Suite 200, Lehi, UT 84043.  ProPay is a registered ISO of Wells Fargo Bank, N.A., Concord, CA. The ProPay Prepaid Debit Mastercards® are issued by MetaBank®, Member FDIC, pursuant to license by Mastercard International Incorporated. Mastercard is a registered trademark of Mastercard International Incorporated.";
@@ -88,6 +90,15 @@
     <title>@ViewBag.PageTitle</title>
     <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <style type="text/css">
+        /*FONTS*/
+        @@import url('https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:300,400,500|Droid+Sans:300,400,500,600') all; //SET THE FONT FACES USING THE VIEWBAG
+        body {font-family: @Html.Raw(ViewBag.FontFamilyTwo), Arial, sans-serif;font-weight: 400;color: #46484a;font-size: 17px;}
+        h1, h2, h3, h4, h5, h6 {font-family: @Html.Raw(ViewBag.FontFamilyOne), Arial, sans-serif;}
+        a.navbar-brand, a.logo {font-family: @Html.Raw(ViewBag.FontFamilyOne), Arial, sans-serif;color: #fff !important;font-size: 2rem;font-weight: 500;margin-top: 0;}
+        h4.features-subheader {font-family: @Html.Raw(ViewBag.FontFamilyOne), sans-serif !important;font-size: 22px;text-align: center;font-weight: 300;padding: 8px 0 15px 0;}
+        .features-description {font-family: @Html.Raw(ViewBag.FontFamilyOne), sans-serif;font-size: 17px;font-weight: 300 !important;text-align: center;}
+        /*./FONTS/.*/
+
         #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
         #features-container {background: @Html.Raw(ViewBag.FeaturesBackgroundColor) !important;border-top: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);border-bottom: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);}
         .features-header, .features-subheader, .features-tagline, .features-description {color:@Html.Raw(ViewBag.FeaturesTextColor);}
@@ -96,14 +107,13 @@
         .nav-tabs .nav-link.active {background-color:@Html.Raw(ViewBag.MainThemeColor);color:@Html.Raw(ViewBag.ButtonTextColor);box-shadow: 0 16px 26px -10px #999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;border-radius: 20px;font-weight: 600;}
 
         .nav-tabs .nav-link {background-color:#eee;color:#777;box-shadow: 0 16px 26px -10px #999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;border-radius: 20px;font-weight: 600;}
-
         .nav-tabs .nav-item.show .nav-link {background-color:@Html.Raw(ViewBag.MainThemeColor);color:@Html.Raw(ViewBag.ButtonTextColor);box-shadow: 0 16px 26px -10px #999, 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px #999;border-radius: 20px;font-weight: 600;}
 
-        .plan-header-name { display: inline;font-size: 2.0em;font-weight: 700;color:@Html.Raw(ViewBag.MainThemeColor); }
-        .rates-as-low-as-percentage { border: solid 1px @Html.Raw(ViewBag.MainThemeColor);color: @Html.Raw(ViewBag.MainThemeColor);padding: 4px 7px 7px 7px;margin-left: 4px;font-size: 22px;}
+        .plan-header-name {display: inline;font-size: 26px;font-weight: 700;color:@Html.Raw(ViewBag.MainThemeColor); }
+        .rates-as-low-as-percentage {border: solid 1px @Html.Raw(ViewBag.MainThemeColor);color: @Html.Raw(ViewBag.MainThemeColor);padding: 4px 7px 7px 7px;margin-left: 4px;font-size: 22px;}
 
-        h1.modal-title-custom { display: inline;font-size: 1.225em;font-weight: 500;color:@Html.Raw(ViewBag.MainThemeColor); }
-        h2.modal-title-custom { display: inline;font-size: 1.125em;font-weight: 500;color:@Html.Raw(ViewBag.MainThemeColor); }
+        h1.modal-title-custom {display: inline;font-size: 1.225em;font-weight: 500;color:@Html.Raw(ViewBag.MainThemeColor); }
+        h2.modal-title-custom {display: inline;font-size: 1.125em;font-weight: 500;color:@Html.Raw(ViewBag.MainThemeColor); }
         .close-modal-button {color: @Html.Raw(ViewBag.ButtonTextColor);background-color:@Html.Raw(ViewBag.MainThemeColor);border-color:@Html.Raw(ViewBag.MainThemeColor);font-size:1em;text-decoration:none;}
 
         .partner-btn {border: none;border-radius: 3px;position: relative;padding: 10px 25%;margin: 10px 1px;font-size: 12px;font-weight: 400;text-transform: uppercase;letter-spacing: 0;
@@ -131,6 +141,18 @@
         #footer p.footer-copyright {color: @Html.Raw(ViewBag.FooterTextColor);}
         #footer .nav-footer .nav-link {@Html.Raw(ViewBag.ButtonTextColor);}
         #footer .nav-footer .nav-link:hover {color: rgba(255, 255, 255, 0.9); }
+
+        @@media (max-width:667px) {}
+        @@media (max-width:667px) and (min-width:421px) {
+            .plan-header-name {display: inline;font-size: 23px;font-weight: 600;color:@Html.Raw(ViewBag.MainThemeColor);}
+            .plan-header-plan {display: inline;font-size: 23px!important;font-weight: 400;color: $color_tapa_approx;}
+            .block-pricing .block-caption {margin-top: 10px;font-size: 56px;margin-bottom: 0;}
+
+            .features-and-pricing-header {color:@Html.Raw(ViewBag.ButtonTextColor);padding: 5px 0 0 25px;font-weight: 500;font-size: 14px;letter-spacing: normal;text-transform: uppercase;}
+        }
+        @@media (max-width:420px) and (min-width:375px) {
+            .plan-header-name {display: inline;font-size: 25px;font-weight: 600;color:@Html.Raw(ViewBag.MainThemeColor);}
+            .plan-header-plan {display: inline;font-size: 25px!important;font-weight: 400;color: $color_tapa_approx;}
     </style>
     <link href="~/Content/features-and-pricing.css" rel="stylesheet" />
     @{
@@ -183,54 +205,40 @@
     @*  ******************* VALUE COLUMNS *******************  *@
     <section id="features-container" class="content">
         <div class="container">
-            <div class="row justify-center">
+            <div class="row justify-center plr10">
                 <div class="col-md-12 text-center mr-auto">
                     <h2 class="features-header">Accept Credit Cards and Debit Cards for your business</h2>
                     <h4 class="features-subheader">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</h4>
                 </div>
                 <div class="col-md-12 text-center mr-auto">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <div class="display-block">
                                 <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-1.png" class="img-fluid" />
                             </div>
                             <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) Debit MasterCard<sup>®</sup></h4>
                             <p class="features-description">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</p>
                         </div>
-                        <div class="col">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <div class="display-block">
                                 <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-2.png" class="img-fluid" />
                             </div>
                             <h4 class="features-tagline">No need to transfer funds around</h4>
                             <p class="features-description">Spend funds from your commissions and sales directly from your ProPay ccount to buy more product from Mary Kay corporate.</p>
                         </div>
-                        <div class="col">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <div class="display-block">
                                 <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-3.png" class="img-fluid" />
                             </div>
                             <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) branded card reader</h4>
                             <p class="features-description">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</p>
                         </div>
-                        <div class="col">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <div class="display-block">
                                 <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-4.png" class="img-fluid" />
                             </div>
                             <h4 class="features-tagline">Integration to your @Html.Raw(ViewBag.PartnerName) personal website</h4>
-                            <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept paymetns any time online.</p>
-                        </div>
-                        <div class="col" hidden>
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-5.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">Additional product header in this space</h4>
-                            <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
-                        </div>
-                        <div class="col" hidden>
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-6.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">Additional product header in this space</h4>
-                            <p class="features-description">Placeholder reserved for additional product and feature description, value and customer benefits.</p>
+                            <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept payments any time online.</p>
                         </div>
                     </div>
                 </div>
@@ -238,16 +246,16 @@
         </div>
     </section>
     @*./******************* VALUE COLUMNS *******************/.*@
-    
+
     @RenderBody()
 
     <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-8 text-center text-md-left text-sm-left">
+                <div class="col-xs-12 col-sm-12 col-md-8 text-md-left text-sm-left text-xs-center">
                     <p class="footer-copyright">@Html.Raw(ViewBag.Copyright)</p>
                 </div>
-                <div class="col-sm-12 col-md-4 text-center text-md-center mb-4">
+                <div class="col-xs-12 col-sm-12 col-md-4 text-center text-md-center text-xs-center mb-4">
                     <ul class="social">
                         @{
                         Html.RenderPartial("_SocialMediaChannels");

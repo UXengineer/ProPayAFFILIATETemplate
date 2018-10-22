@@ -10,23 +10,8 @@ namespace ProPayAffiliateTemplate.Controllers
     {
         public HomeController()
         {
-
         }
-
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Affiliates()
-        {
-            return View();
-        }
-        public ActionResult Test()
-        {
-            return View();
-        }
-        public ActionResult PricingOne()
         {
             return View();
         }
@@ -34,11 +19,6 @@ namespace ProPayAffiliateTemplate.Controllers
         {
             return View();
         }
-        public ActionResult PricingThree()
-        {
-            return View();
-        }
-
         public ActionResult Template()
         {
             return View();
