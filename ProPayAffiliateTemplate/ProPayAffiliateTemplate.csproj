@@ -187,6 +187,17 @@
     <Content Include="App_Themes\ThirtyOne\img\hero.jpg" />
     <Content Include="App_Themes\ThirtyOne\img\logo-nav.png" />
     <Content Include="App_Themes\ThirtyOne\img\logo.png" />
+    <Content Include="App_Themes\TMobile\img\feature-1.png" />
+    <Content Include="App_Themes\TMobile\img\feature-2.png" />
+    <Content Include="App_Themes\TMobile\img\feature-3.png" />
+    <Content Include="App_Themes\TMobile\img\feature-4.png" />
+    <Content Include="App_Themes\TMobile\img\logo.png" />
+    <Content Include="App_Themes\TMobile\img\fp-logo.png" />
+    <Content Include="App_Themes\TMobile\img\hero-mobile.jpg" />
+    <Content Include="App_Themes\TMobile\img\hero-phablet.jpg" />
+    <Content Include="App_Themes\TMobile\img\hero-tablet.jpg" />
+    <Content Include="App_Themes\TMobile\img\hero.jpg" />
+    <Content Include="App_Themes\TMobile\img\logo-nav.png" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
     <Content Include="Content\bootstrap\pricing-table.css" />
     <Content Include="Content\features-and-pricing.css">
@@ -222,6 +233,12 @@
   <ItemGroup>
     <Content Include="App_Themes\iMobile3\img\logo-nav.psd" />
     <Content Include="App_Themes\iMobile3\img\logo.psd" />
+    <Content Include="App_Themes\TMobile\img\heroMobile.psd" />
+    <Content Include="App_Themes\TMobile\img\heroPhablet.psd" />
+    <Content Include="App_Themes\TMobile\img\heroTablet.psd" />
+    <Content Include="App_Themes\Default\img\heroMobile.psd" />
+    <Content Include="App_Themes\Default\img\heroPhablet.psd" />
+    <Content Include="App_Themes\Default\img\heroTablet.psd" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

@@ -616,7 +616,7 @@ a.logo:focus {
 
 @media (max-width: 420px) {
   ul.social {
-    border: dotted 1px white;
+    border: none;
     text-align: center !important;
     padding: 0px;
     margin: 0px;
@@ -864,7 +864,7 @@ section#disabled-cookies {
 @media all and (max-width: 420px) {
   section#disabled-cookies {
     background-color: #ff5061;
-    height: 115px;
+    height: 125px;
     border-bottom: solid 3px #FF0000;
     font-size: 13px; }
   .text-xs-center {

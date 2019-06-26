@@ -1,7 +1,11 @@
 ﻿<!DOCTYPE html>
 @{
+    ViewBag.Language = "en-us";
+    ViewBag.LanguageDirection = "ltr";
+
     // ***** STEP 1 : PICK THE THEME *****
     ViewBag.PartnerTheme = "Default";
+    //ViewBag.PartnerTheme = "TMobile";
     //ViewBag.PartnerTheme = "MaryKay";
     //ViewBag.PartnerTheme = "ThirtyOne";
     //ViewBag.PartnerTheme = "iMobile3";
@@ -10,6 +14,7 @@
 
     // ***** STEP 2 : PICK THE PARTNER'S NAME *****
     ViewBag.PartnerName = "ProPay";
+    //ViewBag.PartnerName = "T-Mobile";
     //ViewBag.PartnerName = "Mary Kay";
     //ViewBag.PartnerName = "31Gifts";
     //ViewBag.PartnerName = "iMobile3";
@@ -17,7 +22,6 @@
     ViewBag.PartnerGoogleTagManagerID = "GTM-MZ8MRT";  // This is the Partner's Google Tag Manager associated with the custom URL and Tag Manager View
     ViewBag.GoogleUniversalID = "UA-12739219-14"; // Use the Google Universal ID for Partners using legacy Google analytics
     ViewBag.PartnerBingValidationID = "90F39A1349E577CF8C33173B061B6A01"; // Bing Ownership Verification tag associated with the URL.
-
 
     // ***** STEP 3 : MATCH THE PARTNER THEME, NAME AND CUSTOM COLORS *****
     //PROPAY Theme
@@ -28,7 +32,7 @@
     ViewBag.ButtonBorderColor = "#0080a6";          //Default Button Border Color
     ViewBag.FeaturesBackgroundColor = "#0080a6";    //Default Features Section Background Color
     ViewBag.FeaturesTextColor = "#FFFFFF";          //Features Text Color
-    ViewBag.DisabledCookiesWarning = "";            //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
+    ViewBag.DisabledCookiesWarning = "hidden";            //TOGGLE COOKIES WARNING SECTION BETWEEN "hidden" or "" > Blank value activates section "disabled-cookies"
     ViewBag.HeroTaglineLabel = "Special merchant accounts for MaryKay consultants";   //HERO TAGLINE
     ViewBag.ButtonTextColor = "#FFFFFF";            // This is the font color used on all the buttons in the HERO image and Features and Pricing tables
     ViewBag.ButtonRadius = "12";                    // This Radius changes the round border for buttons found over the the HERO image.
@@ -68,7 +72,6 @@
     //ViewBag.FooterBackgroundColor = "#303030";      //This is the Footer Background Color
     //ViewBag.FooterTextColor = "#c8c8c8";            //This is the text color located in the footer
 
-
     //Hero Banner
     ViewBag.SignUpButtonLabel = "Sign Up";
     ViewBag.LoginButtonLabel = "LOGIN";
@@ -83,12 +86,13 @@
     //Footer
     ViewBag.Copyright = "2018 © ProPay Inc. All Rights Reserved. | ProPay Inc. 3400 N. Ashton Blvd, Suite 200, Lehi, UT 84043.  ProPay is a registered ISO of Wells Fargo Bank, N.A., Concord, CA. The ProPay Prepaid Debit Mastercards® are issued by MetaBank®, Member FDIC, pursuant to license by Mastercard International Incorporated. Mastercard is a registered trademark of Mastercard International Incorporated.";
 }
-<html>
+<html lang="@ViewBag.Language" dir="@Html.Raw(ViewBag.LanguageDirection)">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>@ViewBag.PageTitle</title>
-    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />*@  @*--- ORIGINAL BOOTSTRAP REFERENCE ---*@
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SlJL6LojdN8eNCOoIfK7KJ7SgRFeYBDu8tB1uxELbSAv+RVgD12pZmOcxTUTPXIg" crossorigin="anonymous">
     <style type="text/css">
         /*FONTS*/
         @@import url('https: //fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:300,400,500|Droid+Sans:300,400,500,600') all; //SET THE FONT FACES USING THE VIEWBAG
@@ -100,6 +104,16 @@
         /*./FONTS/.*/
 
         #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero.jpg') center no-repeat;background-size: cover;min-height: 42rem;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
+        @@media (max-width:800px){
+        #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero-tablet.jpg') center no-repeat;background-size: cover;min-height: 853px;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
+        }
+        @@media (max-width:690px){
+        #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero-phablet.jpg') center no-repeat;background-size: cover;min-height: 640px;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
+        }
+        @@media(max-width: 375px) {
+        #hero-container {background: #3d354f url('../../App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/hero-mobile.jpg') center no-repeat;background-size: cover;min-height: 480px;height: auto;border-radius: 0;width: 100%;color: #fff;padding-top: 1rem;text-align:center;}
+        }
+
         #features-container {background: @Html.Raw(ViewBag.FeaturesBackgroundColor) !important;border-top: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);border-bottom: 1px solid @Html.Raw(ViewBag.FeaturesBackgroundColor);}
         .features-header, .features-subheader, .features-tagline, .features-description {color:@Html.Raw(ViewBag.FeaturesTextColor);}
 
@@ -154,7 +168,7 @@
             .plan-header-name {display: inline;font-size: 25px;font-weight: 600;color:@Html.Raw(ViewBag.MainThemeColor);}
             .plan-header-plan {display: inline;font-size: 25px!important;font-weight: 400;color: $color_tapa_approx;}
     </style>
-    <link href="~/Content/features-and-pricing.css" rel="stylesheet" />
+    <link href="~/Content/features-and-pricing.min.css" rel="stylesheet" />
     @{
         Html.RenderPartial("_AnalyticsGoogleTagManager");
         Html.RenderPartial("_AnalyticsBingVerificationTag");
@@ -171,6 +185,7 @@
     </section>
     <section id="hero-container">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            @*position-fixed" style="z-index:100 !important;"*@
             <div class="container">
                 <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo-nav.png" /></a>
                 <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
@@ -258,7 +273,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 text-center text-md-center text-xs-center mb-4">
                     <ul class="social">
                         @{
-                        Html.RenderPartial("_SocialMediaChannels");
+                            Html.RenderPartial("_SocialMediaChannels");
                         }
                     </ul>
                     <div class="clear"></div>
@@ -267,7 +282,7 @@
         </div>
     </footer>
 
-    <script src="~/Scripts/jquery.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js" integrity="sha384-1AHwFvFDF+iQPDBasw2LKa8PdkI8aYv2ad2o197DHC8qr4LuwSe44JY1THkowrqg" crossorigin="anonymous"></script>
 </body>
 </html>
