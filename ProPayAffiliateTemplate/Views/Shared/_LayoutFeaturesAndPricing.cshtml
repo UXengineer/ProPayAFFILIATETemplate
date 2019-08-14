@@ -39,6 +39,12 @@
     ViewBag.FooterBackgroundColor = "#0080a6";      //This is the Footer Background Color
     ViewBag.FooterTextColor = "#FFFFFF";            //This is the text color located in the footer
 
+    ViewBag.LoginButtonBGColor = "#0080a6;";        //This is the button container background color
+    ViewBag.LoginButtonContainerRadius = "0px";    //This controls the container background border radius
+    ViewBag.LoginButtonBorderColor = "#FFFFFF";     //This controls the button border color
+    ViewBag.LoginButtonBorderRadius = "0px";       //This controls the button border radius
+
+
     //MARYKAY Theme
     //ViewBag.MainThemeColor = "#ef477e";             //MaryKay
     //ViewBag.ButtonBackgroundColor = "#ef136e";      //MaryKay
@@ -74,7 +80,7 @@
 
     //Hero Banner
     ViewBag.SignUpButtonLabel = "Sign Up";
-    ViewBag.LoginButtonLabel = "LOGIN";
+    ViewBag.LoginButtonLabel = "Log In";
 
     //Social Media Channels
     ViewBag.Facebook = "FacebookChannel";   //PARTNER's Facebook Channel
@@ -156,12 +162,14 @@
         #footer .nav-footer .nav-link {@Html.Raw(ViewBag.ButtonTextColor);}
         #footer .nav-footer .nav-link:hover {color: rgba(255, 255, 255, 0.9); }
 
+        #signup-social-btn-container {background-color: @Html.Raw(ViewBag.LoginButtonBGColor);border-radius:@Html.Raw(ViewBag.LoginButtonContainerRadius);margin-right: 15px;padding: 10px 6px;}
+        #signup-social-btn-container .signup-social-btn {display: inline;border:solid 2px @Html.Raw(ViewBag.LoginButtonBorderColor);font-size: 14px;font-weight:700;border-radius:@Html.Raw(ViewBag.LoginButtonBorderRadius);width:120px;padding:5px 25px;}
+
         @@media (max-width:667px) {}
         @@media (max-width:667px) and (min-width:421px) {
             .plan-header-name {display: inline;font-size: 23px;font-weight: 600;color:@Html.Raw(ViewBag.MainThemeColor);}
             .plan-header-plan {display: inline;font-size: 23px!important;font-weight: 400;color: $color_tapa_approx;}
             .block-pricing .block-caption {margin-top: 10px;font-size: 56px;margin-bottom: 0;}
-
             .features-and-pricing-header {color:@Html.Raw(ViewBag.ButtonTextColor);padding: 5px 0 0 25px;font-weight: 500;font-size: 14px;letter-spacing: normal;text-transform: uppercase;}
         }
         @@media (max-width:420px) and (min-width:375px) {
@@ -239,7 +247,7 @@
                                 <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-2.png" class="img-fluid" />
                             </div>
                             <h4 class="features-tagline">No need to transfer funds around</h4>
-                            <p class="features-description">Spend funds from your commissions and sales directly from your ProPay ccount to buy more product from Mary Kay corporate.</p>
+                            <p class="features-description">Spend funds from your commissions and sales directly from your ProPay account to buy more product from Mary Kay corporate.</p>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <div class="display-block">
