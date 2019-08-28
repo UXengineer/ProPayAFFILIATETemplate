@@ -39,7 +39,7 @@
     ViewBag.FooterBackgroundColor = "#0080a6";      //This is the Footer Background Color
     ViewBag.FooterTextColor = "#FFFFFF";            //This is the text color located in the footer
 
-    ViewBag.LoginButtonBGColor = "#0080a6;";        //This is the button container background color
+    ViewBag.LoginButtonBGColor = "#0080a6";        //This is the button container background color
     ViewBag.LoginButtonContainerRadius = "0px";    //This controls the container background border radius
     ViewBag.LoginButtonBorderColor = "#FFFFFF";     //This controls the button border color
     ViewBag.LoginButtonBorderRadius = "0px";       //This controls the button border radius
@@ -193,7 +193,6 @@
     </section>
     <section id="hero-container">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-            @*position-fixed" style="z-index:100 !important;"*@
             <div class="container">
                 <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo-nav.png" /></a>
                 <button class="navbar-toggler navbar-toggler-social" type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
@@ -207,90 +206,108 @@
                 </div>
             </div>
         </nav>
-        <div class="cover-container">
-            <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-6">
-                    <div class="cover-inner">
-                        <div class="display-block pb30"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo.png" class="img-fluid" /></div>
-                        <div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn" title="Easy account sign up. Start Now!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.SignUpButtonLabel'});">@Html.Raw(ViewBag.SignUpButtonLabel)</a></div>
-                        <div class="pb10 mb20"></div>
-                        <h1 class="jumbotron-heading text-shadow">Special merchant accounts for Mary Kay consultants</h1>
-                        <div class="pb30"></div>
-                        <p class="lead" hidden>Be the first to know when we are ready to launch. Etiam porta sem malesuada magna mollis euismod. Sed mollis neque at aliquam rhoncus, consectetur adipiscing elit.</p>
-                        <div class="pt30"><a href="#" id="LoginLink" class="partner-cover-btn" title="Login to your account!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.LoginButtonLabel'});">@Html.Raw(ViewBag.LoginButtonLabel)</a></div>
-                        <div class="pb10 mb10"></div>
-                    </div>
-                </div><div class="col-md-1"></div>
-            </div>
-        </div>
-    </section>
-    @*  ******************* VALUE COLUMNS *******************  *@
-    <section id="features-container" class="content">
-        <div class="container">
-            <div class="row justify-center plr10">
-                <div class="col-md-12 text-center mr-auto">
-                    <h2 class="features-header">Accept Credit Cards and Debit Cards for your business</h2>
-                    <h4 class="features-subheader">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</h4>
-                </div>
-                <div class="col-md-12 text-center mr-auto">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-1.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) Debit MasterCard<sup>®</sup></h4>
-                            <p class="features-description">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</p>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-2.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">No need to transfer funds around</h4>
-                            <p class="features-description">Spend funds from your commissions and sales directly from your ProPay account to buy more product from Mary Kay corporate.</p>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-3.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) branded card reader</h4>
-                            <p class="features-description">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</p>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="display-block">
-                                <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-4.png" class="img-fluid" />
-                            </div>
-                            <h4 class="features-tagline">Integration to your @Html.Raw(ViewBag.PartnerName) personal website</h4>
-                            <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept payments any time online.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    @*./******************* VALUE COLUMNS *******************/.*@
 
-    @RenderBody()
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 text-md-left text-sm-left text-xs-center">
-                    <p class="footer-copyright">@Html.Raw(ViewBag.Copyright)</p>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 text-center text-md-center text-xs-center mb-4">
-                    <ul class="social">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" hidden>
+            <div class="container">
+                <a class="navbar-brand text-shadow-half mp0" href="Index"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo-nav.png" /></a>
+                <button class="navbar-toggler navbar-toggler-social" hidden type="button" data-toggle="collapse" data-target="#navbar-4" aria-controls="navbar-4" aria-expanded="false" aria-label="Toggle navigation">@*CONNECT*@<i class="fa fa-bars"></i></button>
+                <div class="justify-content-end mlrauto" id="navbar-4">@*pull-xs-right navbar-collapse collapse*@
+                <div class="clear clearfix display-block">
+                    <ul class="social navbar-nav mt-2 mt-md-0">
                         @{
                             Html.RenderPartial("_SocialMediaChannels");
                         }
                     </ul>
-                    <div class="clear"></div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
-    </footer>
+    </nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js" integrity="sha384-1AHwFvFDF+iQPDBasw2LKa8PdkI8aYv2ad2o197DHC8qr4LuwSe44JY1THkowrqg" crossorigin="anonymous"></script>
+    <div class="cover-container">
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-6">
+                <div class="cover-inner">
+                    <div class="display-block pb30"><img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/logo.png" class="img-fluid" /></div>
+                    <div class="pt15"><a href="#" id="SignUpLink" class="partner-cover-btn" title="Easy account sign up. Start Now!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.SignUpButtonLabel'});">@Html.Raw(ViewBag.SignUpButtonLabel)</a></div>
+                    <div class="pb10 mb20"></div>
+                    <h1 class="jumbotron-heading text-shadow">Special merchant accounts for Mary Kay consultants</h1>
+                    <div class="pb30"></div>
+                    <p class="lead" hidden>Be the first to know when we are ready to launch. Etiam porta sem malesuada magna mollis euismod. Sed mollis neque at aliquam rhoncus, consectetur adipiscing elit.</p>
+                    <div class="pt30"><a href="#" id="LoginLink" class="partner-cover-btn" title="Login to your account!" onclick="dataLayer.push({'pageTitle': '@ViewBag.PageTitle','event': '@ViewBag.LoginButtonLabel'});">@Html.Raw(ViewBag.LoginButtonLabel)</a></div>
+                    <div class="pb10 mb10"></div>
+                </div>
+            </div><div class="col-md-1"></div>
+        </div>
+    </div>
+</section>
+@*  ******************* VALUE COLUMNS *******************  *@
+<section id="features-container" class="content">
+    <div class="container">
+        <div class="row justify-center plr10">
+            <div class="col-md-12 text-center mr-auto">
+                <h2 class="features-header">Accept Credit Cards and Debit Cards for your business</h2>
+                <h4 class="features-subheader">Why do Mary Kay consultants choose ProPay for their business? Because only ProPay offers this unique set of payment tools so that you never miss a chance to make a sale.</h4>
+            </div>
+            <div class="col-md-12 text-center mr-auto">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="display-block">
+                            <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-1.png" class="img-fluid" />
+                        </div>
+                        <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) Debit MasterCard<sup>®</sup></h4>
+                        <p class="features-description">Promote your brand every time you use your card. Access to funds within 24 hours including holidays and weekends.</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="display-block">
+                            <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-2.png" class="img-fluid" />
+                        </div>
+                        <h4 class="features-tagline">No need to transfer funds around</h4>
+                        <p class="features-description">Spend funds from your commissions and sales directly from your ProPay account to buy more product from Mary Kay corporate.</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="display-block">
+                            <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-3.png" class="img-fluid" />
+                        </div>
+                        <h4 class="features-tagline">@Html.Raw(ViewBag.PartnerName) branded card reader</h4>
+                        <p class="features-description">Show off your Mary Kay business every time you swipe a credit/debit card for a sale.</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <div class="display-block">
+                            <img src="~/App_Themes/@Html.Raw(ViewBag.PartnerTheme)/img/feature-4.png" class="img-fluid" />
+                        </div>
+                        <h4 class="features-tagline">Integration to your @Html.Raw(ViewBag.PartnerName) personal website</h4>
+                        <p class="features-description">Only ProPay is integrated with your Mary Kay Personal Website so that you can accept payments any time online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*./******************* VALUE COLUMNS *******************/.*@
+
+@RenderBody()
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 text-md-left text-sm-left text-xs-center">
+                <p class="footer-copyright">@Html.Raw(ViewBag.Copyright)</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 text-center text-md-center text-xs-center mb-4">
+                <ul class="social">
+                    @{
+                        Html.RenderPartial("_SocialMediaChannels");
+                    }
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js" integrity="sha384-1AHwFvFDF+iQPDBasw2LKa8PdkI8aYv2ad2o197DHC8qr4LuwSe44JY1THkowrqg" crossorigin="anonymous"></script>
 </body>
 </html>

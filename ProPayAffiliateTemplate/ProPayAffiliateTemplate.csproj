@@ -149,6 +149,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Default\img\hero-mobile.jpg" />
+    <Content Include="App_Themes\Default\img\hero-phablet.jpg" />
+    <Content Include="App_Themes\Default\img\hero-tablet.jpg" />
     <Content Include="App_Themes\Default\img\hero.jpg" />
     <Content Include="App_Themes\Default\img\feature-1.png" />
     <Content Include="App_Themes\Default\img\feature-2.png" />
